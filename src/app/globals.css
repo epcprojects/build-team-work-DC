@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+   /* Colors */
+  --color-primary: #9c2068;
+  --color-primaryDark: #851a58;
+
+  --color-secondary: #32488b;
+  --color-secondaryDark: #26376a;
+
+  --color-gray-m-100: #EEF2F6;
+  --color-gray-m-800: #202939;
+  --color-gray-m-700: #364152;
+  --color-gray-m-200: #E3E8EF;
+  --color-gray-m-900: #121926;
+  --color-gray-m-300: #CDD5DF;
+  --color-gray-m-600: #4B5565;
+  --color-gray-m-400: #9AA4B2;
+
+  --color-midNight: #011f3d;
+  --color-navyBlue: #0a152f;
+  --color-pearl: #f7f1f3;
+  --color-haiti: #0C1A3D;
+  --color-aliceBlue: #eff6ff;
+
+  --color-prussianBlue: #043956;
+  --color-catalineBlue: #052c65;
+  --color-blueChalk: #e1edff;
+
+  --color-nebula: #D0D5DD;
+  --color-mirage: #212529;
+  --color-gravel: #494949;
+  --color-alabaster: #f6fbff;
+  --color-silkBlue: #488dca;
+  --color-whiteSmoke: #f3f4f6;
+  --color-fantacy: #f2f4f7;
+  --color-mabel: #e1f3f5;
+
+  --color-examRed: #DC2626;
+  --color-examGreen: #16A34A;
+  --color-sapphireBlue: #3255B5;
+
+  --color-iceBerg: #ddf1ff;
+  --color-pattensBlue: #def1ff;
+  --color-carbonGray: #5b5959;
+  --color-astronautBlue: #043956;
+
+  --color-catSkillWhite: #F2F7F2;
+  --color-lavenderBlush: #F7F2F2;
+  --color-mistBlue: #6B7280;
+  --color-coralBlue: #93def6;
+  --color-oysterBlue: #E0F8FF;
+
+   /* shadows */
+   --shadow-imgShadow: 0 25px 25px #9e2e2e16;
+
+   /* breakpoints */
+  /* --breakpoint-lg: 960px;
+  --breakpoint-xl: 1140px;
+  --breakpoint-2xl: 1320px; */
+
+--spacing-8xl: 1320px;
+
+/* Background Images */
+   --background-image-design: url("/images/design.png");
+  --background-image-bannerPricing: url("/images/banner-product.jpg");
+  --background-image-bannerCloud: url("/images/bannerWithCloud.png");
+  --background-image-bannerContactUs: url("/images/bannerContactUs.png");
+}
+
+/* @utility container {
+  margin-inline: auto;
+  width: 100%;
+
+  @media (min-width: 960px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1140px) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 1320px) {
+    max-width: 1320px;
+  }
+} */
+
+@utility list-checkmark {
+  list-style-image: url("/images/checkMark.svg");
+}
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "title": "Sexual Harassment Training",
+      "description": "Because of its prevalence and damaging effects on an organization's productivity, morale, and culture, employers must try to actively prevent and eliminate sexual harassment in their organization.",
+      "image": "images/othertrainingimages/SexualHarassmentTraining.png",
+      "link": "https://www.sexualharassmenttraining.com/" 
+    },
+
+    {
+        "id": 2,
+        "title": "Diversity Inclusion Training",
+        "description": "Employers can create a happy and thriving workplace for everyone by embracing diversity, inclusion and equity and eliminating discrimination, harassment and bullying.",
+        "image": "images/othertrainingimages/DiversityInclusionTraining.png",
+        "link": "https://www.diversityinclusiontraining.com/" 
+      },
+      {
+        "id": 3,
+        "title": "HR Training",
+        "description": "Human resources and workplace training and compliance including sexual harassment and diversity, hazmat, customer service, safety training, management training, etc.",
+        "image": "images/othertrainingimages/HRTraining.png",
+        "link": "https://www.hrtraining.com/" 
+      },
+      {
+        "id": 4,
+        "title": "OSHA Hazard Communications Training",
+        "description": "Training and compliance for the U.S. OSHA Hazard Communication Standard (29 CFR 1910.1200) which specifies that when hazardous chemicals are present in the workplace, employees have a right to know about the risks involved with storing and handling such substances.",
+        "image": "images/othertrainingimages/OSHAHazardCommunicationsTraining.png",
+        "link": "https://www.hazardcommunicationstraining.com/" 
+      },
+      {
+        "id": 5,
+        "title": "OSHA Bloodborne Pathogen Training",
+        "description": "Training and compliance for the U.S. federal OSHA Occupational Exposure to Bloodborne Pathogens standard (29 CFR 1910.1030) which protects workers against the health hazards from exposure to blood and other potentially infectious materials.",
+        "image": "images/othertrainingimages/OSHABloodbornePathogenTraining.png",
+        "link": "https://www.bloodbornepathogentraining.com/" 
+      },
+      {
+        "id": 6,
+        "title": "HIPAA Training",
+        "description": "HIPAA stands for the Health Insurance Portability and Accountability Act and is a U.S. federal law enacted in 1996 as an attempt at incremental healthcare reform. HIPAA establishes standards and safeguards to protect the privacy and security of patient health information.",
+        "image": "images/othertrainingimages/HIPAATraining.png",
+        "link": "https://www.hipaatraining.com/" 
+      },
+      {
+        "id": 7,
+        "title": "Infection Controls Training",
+        "description": "Healthcare Associated Infections (HAIs) are among the most common complications of healthcare services worldwide. This training address ways to prevent and control the spread of healthcare associated infections in healthcare facilities.",
+        "image": "images/othertrainingimages/InfectionControlsTraining.png",
+        "link": "https://www.infectioncontrolstraining.com/" 
+      },
+      {
+        "id": 8,
+        "title": "Medical Ethics Training",
+        "description": "Medical ethics provides a set of guiding principles that serve as the foundation for all medical care and are used by healthcare professionals and researchers to guide them in making the difficult decisions required of them every day.",
+        "image": "images/othertrainingimages/MedicalEthicsTraining.png",
+        "link": "https://www.medicalethicstraining.com/" 
+      },
+      {
+        "id": 9,
+        "title": "Fraud Waste and Abuse Training",
+        "description": "Training and compliance for the U.S. Centers for Medicare and Medicaid Services fraud, waste, and abuse requirement which focuses on eliminating fraud, waste, and abuse in the Medicare/Medicaid healthcare system.",
+        "image": "images/othertrainingimages/FraudWasteandAbuseTraining.png",
+        "link": "https://www.fraudwasteandabusetraining.com/" 
+      },
+      {
+        "id": 10,
+        "title": "Governmental Training",
+        "description": "Governmental Training offers high quality online government training for federal and state employees, municipal/city employees, law enforcement and correctional officers.",
+        "image": "images/othertrainingimages/GT-training.png",
+        "link": "https://www.governmentaltraining.com/ity" 
+      }
+    
+  ]
