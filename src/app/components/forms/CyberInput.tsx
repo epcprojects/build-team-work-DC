@@ -6,6 +6,7 @@ import { Images } from "../../ui/images";
 export const InputType = {
   TEXT: "text",
   PASSWORD: "password",
+  EMAIL: "email"
 };
 
 interface InputProps {

@@ -4,6 +4,8 @@ import {ComponentImages} from './Component'
 import {footerImages} from './Footer'
 import { LoginPageImages } from "./Login";
 import { IndexPageImages } from "./IndexPage";
+import {faqsImages} from './FAQs'
+import {contactUsImages} from './ContactUs'
 
 export const Images = {
   headerImages: headerImages,
@@ -11,5 +13,7 @@ export const Images = {
   componentImages: ComponentImages,
     footerImages: footerImages,
     LoginPageImages: LoginPageImages,
-    IndexPageImages: IndexPageImages
+    IndexPageImages: IndexPageImages,
+     faqsImages: faqsImages,
+     contactUsImages: contactUsImages,
 };

@@ -89,8 +89,8 @@
 /* Background Images */
    --background-image-design: url("/images/homepageimages/design.png");
   --background-image-bannerPricing: url("/images/pricingPageImages/banner-product.jpg");
-  --background-image-bannerCloud: url("/images/bannerWithCloud.png");
-  --background-image-bannerContactUs: url("/images/bannerContactUs.png");
+  --background-image-bannerCloud: url("/images/faqsPageImages/bannerWithCloud.png");
+  --background-image-bannerContactUs: url("/images/contactUsPageImages/bannerContactUs.png");
 
 
 }
