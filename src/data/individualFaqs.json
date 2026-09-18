@@ -1,0 +1,24 @@
+[
+    {
+      "question": "What is the cost of training for an individual?",
+      "answer":
+        "For an individuals, they just need the Team Work training which is $29.99 for a 2 year certificate."
+    },
+    {
+      "question":
+        "Do you offer training that an organization can use to train its employees?",
+      "answer":
+        "Yes we do. That is our organizational training. Choose the Team Work for Organizations item from the top products menu and go the Employee Training section."
+    },
+    {
+      "question": "Can I train multiple people using an individual account?",
+      "answer":
+        "No. Only if you have purchased organizational training. Our individual training is licensed to a single individual only."
+    },
+    {
+      "question":
+        "What if I want to put a different name on the certificate from the information I enter on the registration screen for my billing information?",
+      "answer":
+        "The name on the certificate is independent of the name you use to register for the course. Our system will actually prompt the end user for their name on the certificate once they pass the final exam so that they can enter it exactly as they want it."
+    }
+  ]

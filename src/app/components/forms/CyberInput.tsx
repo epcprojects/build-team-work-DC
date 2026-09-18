@@ -57,7 +57,7 @@ const CyberInput: React.FC<InputProps> = ({
   return (
     <label className="block">
       {label && (
-        <span className="block text-start mb-1">{label}:</span>
+        <span className="block text-start mb-1 font-poppins">{label}:</span>
       )}
       <div className="relative">
         <input

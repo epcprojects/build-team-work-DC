@@ -45,15 +45,22 @@ const Header = () => {
   const navLinks = [
     { href: "/pricing", label: "Pricing" },
     { href: "/faqs", label: "FAQs" },
-    { href: "/blog", label: "Blog" },
     { href: "/contactus", label: "Contact Us" },
   ];
 
   const productsDropdown = [
-    { href: "/cyber-safety-training", label: "Cyber Safety for Individuals" },
+    { href: "/business-essentials", label: "Business Essentials" },
     {
-      href: "/cyber-safety-compliance",
-      label: "Cyber Safety for Organizations",
+      href: "/employee-excellence",
+      label: "Employee Excellence",
+    },
+    {
+      href: "/emotional-intelligence",
+      label: "Emotional Intelligence",
+    },
+    {
+      href: "/healthy-body-and-mind",
+      label: "Healthy Body and Mind",
     },
   ];
 

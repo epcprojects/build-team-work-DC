@@ -14,7 +14,7 @@ const TrainingList = () => {
           >
             <img src={training.image} className="w-full" alt={training.title} />
 
-            <div className="px-4 py-3 bg-white flex-1">
+            <div className="px-6 py-3 bg-white flex-1">
               <h2 className="font-semibold text-lg md:text-xl mb-1">
                 {training.title}
               </h2>

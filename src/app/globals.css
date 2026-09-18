@@ -5,6 +5,16 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: 'telegrafultrabold';
+  src:
+    url('/fonts/telegraf_ultrabold_800-webfont.woff2') format('woff2'),
+    url('/fonts/telegraf_ultrabold_800-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* recommended add: FOUT/FOIT avoid karne ke liye */
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -15,7 +25,7 @@
   --color-primaryDark: #851a58;
 
   --color-secondary: #32488b;
-  --color-secondaryDark: #26376a;
+  --color-secondaryDark: #052c65; 
 
   --color-gray-m-100: #EEF2F6;
   --color-gray-m-800: #202939;
@@ -60,6 +70,12 @@
   --color-coralBlue: #93def6;
   --color-oysterBlue: #E0F8FF;
 
+  --color-platinum: #dee2e6;
+
+  /* font types */
+   --font-poppins: "Poppins", sans-serif;
+   --font-telegraf: 'telegrafultrabold', sans-serif;
+
    /* shadows */
    --shadow-imgShadow: 0 25px 25px #9e2e2e16;
 
@@ -71,41 +87,63 @@
 --spacing-8xl: 1320px;
 
 /* Background Images */
-   --background-image-design: url("/images/design.png");
-  --background-image-bannerPricing: url("/images/banner-product.jpg");
+   --background-image-design: url("/images/homepageimages/design.png");
+  --background-image-bannerPricing: url("/images/pricingPageImages/banner-product.jpg");
   --background-image-bannerCloud: url("/images/bannerWithCloud.png");
   --background-image-bannerContactUs: url("/images/bannerContactUs.png");
+
+
 }
 
-/* @utility container {
-  margin-inline: auto;
-  width: 100%;
-
-  @media (min-width: 960px) {
-    max-width: 960px;
-  }
-
-  @media (min-width: 1140px) {
-    max-width: 1140px;
-  }
-
-  @media (min-width: 1320px) {
-    max-width: 1320px;
-  }
-} */
 
 @utility list-checkmark {
   list-style-image: url("/images/checkMark.svg");
 }
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.text-telegraph {
+  font-family: 'telegrafultrabold' !important;
+}
+
+
+.custom-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .custom-list li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 10px;
+   
+  }
+  
+  .custom-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background: url('/images/checkMark.svg') no-repeat center center;
+    background-size: cover;
+  }
+
+  .custom-list.pricing li::before {
+    background: url('/images/pricingPageImages/pricingCheck.svg') no-repeat center center;
+  }
+
+
+  .custom-list.product li::before {
+    background: url('/images/productCheck.svg') no-repeat center center;
+  }
+
+  .custom-list.blue li::before {
+    background: url('/images/blueCheck.svg') no-repeat center center;
+  }

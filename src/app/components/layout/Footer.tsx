@@ -5,10 +5,10 @@ import { Images } from "../../ui/images";
 import Link from "next/link";
 
 const companyInfo = {
-  logo: "/images/logoWhite.svg",
+  logo: "/images/footer_logo.svg",
   address: ["5114 Balcones Woods Dr", "Suite 307, #331", "Austin, TX 78759"],
   phone: "+1 (512) 402-5963",
-  email: "info@cybersafetytraining.com",
+  email: "info@buildteamwork.com",
 };
 
 const navLinks = {
@@ -19,11 +19,13 @@ const navLinks = {
     { name: "Privacy Policy", href: "/privacy" },
   ],
   services: [
-    { name: "Cyber Safety for Individuals", href: "/cyber-safety-training" },
+    { name: "Business Essentials", href: "/business-essentials" },
     {
-      name: "Cyber Safety for Organizations",
-      href: "/cyber-safety-compliance",
+      name: "Employee Excellence",
+      href: "/employee-excellence",
     },
+    { name: "Emotional Intelligence", href: "/emotional-intelligence" },
+    { name: "Healthy Body and Mind", href: "/healthy-body-and-mind" },
     { name: "Frequently Asked Questions", href: "/faqs" },
   ],
 };
@@ -139,7 +141,7 @@ const Footer = () => {
       </div>
 
       <div className="py-3 px-2 bg-navyBlue">
-        <div className="container mx-auto">
+        <div className="container max-w-8xl mx-auto">
           <p className="font-normal text-center md:text-start text-white text-sm py-3">
             © Copyright {new Date().getFullYear()} Digital Compliance, All
             Rights Reserved.

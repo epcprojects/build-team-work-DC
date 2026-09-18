@@ -1,0 +1,36 @@
+[
+    {
+      "question":
+        "Do you offer training that an organization can use to train its employees?",
+      "answer":
+        "Yes we do. Choose the Team Work for Organizations item from the top products menu and go the Employee Training section."
+    },
+    {
+      "question": "Who is the organizational training for?",
+      "answer":
+        "Organizational training is for employers/groups that need to train their employees. It provides a single shared login that all employees can login to as well as group discounts starting at 10 seats and above."
+    },
+    {
+      "question":
+        "What is the minimum number of seats I need to create a organizational training account?",
+      "answer":
+        "Two seats. If you need to add licenses in the future, you can do so using the Add More Licenses link when you login to your admin dashboard."
+    },
+    {
+      "question": "Can I add seats later on?",
+      "answer":
+        "Yes. To add additional licenses, login to your admin dashboard and click on the Add More Licenses link. There are no contracts and you simply pay as you go very much like a phone card."
+    },
+    {
+      "question":
+        "If I purchase seats after my initial purchase do I still get a volume discount?",
+      "answer":
+        "Yes you continue to receive the same discount level on additional seats. So if you bought 25 seats, your pricing would be $23.99 for those 25 seats and also for any future seats you purchased. Additionally, as you continue to purchase seats with us we continue to discount you down in pricing as you hit the new tiers."
+    },
+    {
+      "question":
+        "Do you offer reporting with the organizational training account so I can tell who has taken the training?",
+      "answer":
+        "Yes we provide reporting free with the organizational training account. There are two types of reporting that we provide. The first is that you will receive an automatic email copy of each certificate generated under the account. The second is that we provide a real time training log that maintains a training log for you automatically. It will also allow you to regenerate a certificate from that Excel report at anytime in case you lost or misplaced a certificate."
+    }
+  ]

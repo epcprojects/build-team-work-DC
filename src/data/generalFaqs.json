@@ -1,0 +1,35 @@
+[
+  {
+    "question": "What is Build Team Work?",
+    "answer": {
+      "text": "The Build Team Work series offers a collection of 4 video series that help organizations achieve excellence simply and effectively:",
+      "bullets": [
+        "The Business Essentials Series is a collection of short HR training films that address the core and essential training required by all employees.",
+        "The Employee Excellence Series is a collection of powerful HR training films designed to help organizations achieve excellence in their interactions with external-facing customers.",
+        "The Emotional Intelligence Series is a collection of thought provoking HR training films designed to help organizations achieve excellence in their internal interactions and build cohesive teams.",
+        "The Healthy Body and Mind Series is a collection of powerful HR training films focused on employee wellness and ensuring no one is left behind."
+      ]
+    }
+  },
+  {
+    "question": "What if I don't pass the final exam? Do I have to pay for the training again?",
+    "answer": {
+      "text": "You can take the final exam as many times as you need to pass and you can also take it multiple times if you want to try for a higher score. There is no charge for taking the final exam multiple times. You are guaranteed a certificate when you purchase a course.",
+      "bullets": []
+    }
+  },
+  {
+    "question": "How long do I have to take the training?",
+    "answer": {
+      "text": "For an individual account, you have up to 90 days from the date of signup to take the training. You can also login and review the training during those 90 days as well. For organizational training accounts there is no expiration date so any seats are good until used.",
+      "bullets": []
+    }
+  },
+  {
+    "question": "Do you have an eval program where I could view the training?",
+    "answer": {
+      "text": "We don't offer an official eval program. However, we do offer a free demo of the first lesson on our website and you are welcome to signup for 1 seat to view it in full and if it does not meet your needs you are covered under our full money back guarantee.",
+      "bullets": []
+    }
+  }
+]
