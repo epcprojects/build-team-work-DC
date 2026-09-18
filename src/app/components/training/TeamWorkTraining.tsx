@@ -1,4 +1,5 @@
 import teamWorkTrainingData from "@/src/data/teamWorkTrainingData.json";
+import Image from "next/image";
 const TeamWorkTraining = () => {
   return (
     <section className="bg-aliceBlue">
@@ -12,12 +13,11 @@ const TeamWorkTraining = () => {
               <a
                 href={training.link}
                 className="rounded-xl  overflow-hidden group flex flex-col h-full"
-              >
-                <img
-                  src={training.image}
+              > 
+
+                <Image src={training.image}
                   className="w-full rounded-xl"
-                  alt={training.title}
-                />
+                  alt={training.title}/>
 
                 <div className="px-1 pt-4 pb-2  flex-1">
                   <h2 className="font-semibold text-base md:text-lg mb-1">
@@ -41,8 +41,8 @@ const TeamWorkTraining = () => {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M0.410826 0.642759C0.736263 0.317322 1.2639 0.317322 1.58934 0.642759L6.00008 5.0535L10.4108 0.642759C10.7363 0.317322 11.2639 0.317322 11.5893 0.642759C11.9148 0.968196 11.9148 1.49583 11.5893 1.82127L6.58934 6.82127C6.2639 7.14671 5.73626 7.14671 5.41083 6.82127L0.410826 1.82127C0.0853888 1.49583 0.0853888 0.968196 0.410826 0.642759Z"
                       fill="#9C2068"
                     ></path>
