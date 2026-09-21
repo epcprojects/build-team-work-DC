@@ -10,7 +10,6 @@ import {
   TrainingDetailCard,
   TrainingList,
 } from "@/src/app/components/training";
-import { useCart } from "@/src/app/components/cart/useCart";
 import { ClockIcon, PlayIcon } from "@/public/icons";
 import { trainingDetails } from "../../data/trainingDetails";
 

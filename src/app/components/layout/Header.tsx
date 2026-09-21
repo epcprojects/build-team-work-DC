@@ -49,18 +49,21 @@ const Header = () => {
   ];
 
   const productsDropdown = [
-    { href: "/business-essentials", label: "Business Essentials" },
+    { href: "/business-essentials", label: "Business Essentials", image: "/images/products/businessIntelligence.svg" },
     {
       href: "/employee-excellence",
-      label: "Employee Excellence",
+      label: "Employee Excellence"
+      , image: "/images/products/employeeExcellence.svg"
     },
     {
       href: "/emotional-intelligence",
-      label: "Emotional Intelligence",
+      label: "Emotional Intelligence"
+      , image: "/images/products/emotionalIntelligence.svg"
     },
     {
       href: "/healthy-body-and-mind",
-      label: "Healthy Body and Mind",
+      label: "Healthy Body and Mind"
+      , image: "/images/products/healthyBodyMind.svg"
     },
   ];
 
@@ -74,7 +77,7 @@ const Header = () => {
                 <span className="sr-only">Your Company</span>
                 <Image
                   src={Images.headerImages.logo}
-                  className="h-9 lg:h-[60px] w-fit"
+                  className="h-9 lg:h-15 w-fit"
                   alt="cyber safety training logo"
                   loading="eager"
                 />
@@ -154,18 +157,19 @@ const Header = () => {
                   </svg>
                 </button>
                 {isDropdownOpen && (
-                  <div className="absolute bg-white border-b-2 drop-shadow-xl border-secondary mt-2 pb-1">
+                  <div className="absolute bg-white drop-shadow-xl  mt-2 pb-1 w-65">
                     {productsDropdown.map((product) => (
                       <Link
-                        className={`block py-2 px-4 text-base  whitespace-nowrap ${
+                        className={` py-2.5 px-4 text-base  whitespace-nowrap flex gap-2   ${
                           currentPath === product.href
-                            ? "bg-secondary text-white"
+                            ? " text-black"
                             : "text-black hover:bg-gray-m-100"
                         }`}
                         key={product.href}
                         href={product.href}
                         onClick={closeDropdown}
                       >
+                        <Image src={product.image} alt="" width={24} height={20}/>
                         {product.label}
                       </Link>
                     ))}
