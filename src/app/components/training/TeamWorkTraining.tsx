@@ -15,9 +15,9 @@ const TeamWorkTraining = () => {
                 className="rounded-xl  overflow-hidden group flex flex-col h-full"
               > 
 
-                <Image src={training.image}
+                <Image src={training.image} alt={training.title} width={288} height={158}
                   className="w-full rounded-xl"
-                  alt={training.title}/>
+                  />
 
                 <div className="px-1 pt-4 pb-2  flex-1">
                   <h2 className="font-semibold text-base md:text-lg mb-1">

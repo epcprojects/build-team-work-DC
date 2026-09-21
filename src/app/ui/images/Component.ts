@@ -5,6 +5,8 @@ import eyeOpened from "../../../..//public/images/eyeOpened.svg";
 import eyeClosed from "../../../..//public/images/eyeClosed.svg";
 import CyberMockupScreens from "@/public/images/homePageImages/CyberMockupScreens.png";
 import arrowHead from "@/public/images/pricingPageImages/arrowHead.svg";
+import cyberBook from "@/public/images/componentsImages/cyberBook.png";
+import audienceIcon from "@/public/images/componentsImages/audienceIcon.svg";
 
 export const ComponentImages = {
   homeIcon: homeIcon,
@@ -13,4 +15,6 @@ export const ComponentImages = {
   eyeClosed: eyeClosed,
    CyberMockupScreens: CyberMockupScreens,
      arrowHead: arrowHead,
+       cyberBook: cyberBook,
+        audienceIcon: audienceIcon,
 };

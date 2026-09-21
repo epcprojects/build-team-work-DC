@@ -91,6 +91,7 @@
   --background-image-bannerPricing: url("/images/pricingPageImages/banner-product.jpg");
   --background-image-bannerCloud: url("/images/faqsPageImages/bannerWithCloud.png");
   --background-image-bannerContactUs: url("/images/contactUsPageImages/bannerContactUs.png");
+  --background-image-ProductBannerBusinessEssentials: url("/images/products/businessEssentialsPageImages/ProductBannerBusinessEssentials.jpg");
 
 
 }
@@ -147,3 +148,25 @@ body {
   .custom-list.blue li::before {
     background: url('/images/blueCheck.svg') no-repeat center center;
   }
+
+
+  @keyframes tabGlow {
+  0%{
+    box-shadow: 0 0 0 0 #a1d1e4;
+    border-radius: 5px;
+}
+  100% {
+    box-shadow: 0 0 0 10px rgba(133, 26, 88, .4);
+    border-radius: 3px;
+  }
+
+  /* 50% {
+    box-shadow:
+      0 0 8px rgba(156, 32, 104, 0.35),
+      0 0 18px rgba(156, 32, 104, 0.2);
+  } */
+}
+
+.tab-glow {
+  animation: tabGlow 1.8s ease-in-out infinite;
+}

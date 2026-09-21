@@ -36,3 +36,15 @@ export const organizationalPricingFeatures = [
   "English and Spanish versions",
   "No expiration date on any seats purchased",
 ] as const;
+
+export const individualCourseFeatures = [
+  "Online 24x7 self paced training",
+  "Only $29.99 for an individual",
+  "3 Year certificate upon completion",
+  "Free retakes. You are guaranteed a certificate",
+  "Receive your Business Essentials certificate immediately upon completion",
+  "Comprehensive and easy to understand training",
+  "Up to 90 days to take and review the training",
+  "English and Spanish versions included",
+  "30 day money back guarantee",
+] as const;

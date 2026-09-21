@@ -3,14 +3,14 @@
       "id": 1,
       "title": "Business Essentials",
       "description": "Ensure Everyone Has The Basics",
-      "image": "images/homepageimages/BusinessEssentials.jpg",
+      "image": "/images/homePageImages/BusinessEssentials.jpg",
       "link": "https://www.sexualharassmenttraining.com/" 
     },
     {
       "id": 2,
       "title": "Employee Excellence",
       "description": "Excellence in Customer Facing",
-      "image": "images/homepageimages/EmployeeExcellence.jpg",
+      "image": "/images/homePageImages/EmployeeExcellence.jpg",
       "link": "https://www.sexualharassmenttraining.com/" 
     },
 
@@ -18,14 +18,14 @@
         "id": 3,
         "title": "Emotional Intelligence",
         "description": "Excellence in Internal Teams",
-        "image": "images/homepageimages/EmotionalIntelligence.jpg",
+        "image": "/images/homePageImages/EmotionalIntelligence.jpg",
         "link": "https://www.diversityinclusiontraining.com/" 
       },
       {
         "id": 4,
         "title": "Healthy Body and Mind",
         "description": "Ensure No One Is Left Behind",
-        "image": "images/homepageimages/HealthyBodyandMind.jpg",
+        "image": "/images/homePageImages/HealthyBodyandMind.jpg",
         "link": "https://www.hrtraining.com/" 
       }
      
