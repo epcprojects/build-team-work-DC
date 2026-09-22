@@ -1,4 +1,5 @@
-import { BrochureCard, ListOfFeature } from "@/src/app/components/training";
+import {  ListOfFeature } from "@/src/app/components/products";
+import { BrochureCard } from "@/src/app/components/training";
 import type { StaticImageData } from "next/image";
 
 import {

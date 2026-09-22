@@ -6,7 +6,4 @@ export { default as PricingTable } from "./PricingTable";
 export { default as FeatureList } from "./FeatureList";
 export { default as BrochureCard } from "./BrochureCard";
 export { default as ProductBanner } from "./ProductBanner";
-export { default as TrainingDetailCard } from "./TrainingDetailCard";
-export { default as OrganizationPane } from "./OrganizationPane";
-export { default as IndividualPane } from "./IndividualPane";
-export { default as ListOfFeature } from "./ListOfFeature";
+

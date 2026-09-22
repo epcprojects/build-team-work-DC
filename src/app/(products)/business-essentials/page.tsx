@@ -2,17 +2,15 @@
 
 import { useState } from "react";
 import { FaqAccordion } from "@/src/app/components/faq";
-import { FancyBoxVideo } from "@/src/app/components/overlays";
 import {
   IndividualPane,
   OrganizationPane,
-  ProductBanner,
   TrainingDetailCard,
-  TrainingList,
-} from "@/src/app/components/training";
+} from "@/src/app/components/products";
 import { ClockIcon, PlayIcon } from "@/public/icons";
 import { trainingDetails } from "../../data/trainingDetails";
 import { Images } from "../../ui/images";
+import { ProductBanner, TrainingList } from "../../components/training";
 
 type Tab = "individual" | "organization";
 

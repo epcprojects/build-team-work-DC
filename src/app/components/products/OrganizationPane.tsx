@@ -1,6 +1,5 @@
 "use client";
 
-import BrochureCard from "./BrochureCard";
 import { useEffect, useState } from "react";
 import type { StaticImageData } from "next/image";
 import { SingleAccordionSkeleton } from "../skeletons";
@@ -13,6 +12,7 @@ import {
 } from "../../data/productPageData";
 import Image from "next/image";
 import ListOfFeature from "./ListOfFeature";
+import { BrochureCard } from "../training";
 
 interface OrganizationPaneProps {
   courseDescription: React.ReactNode;
