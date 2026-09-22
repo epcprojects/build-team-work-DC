@@ -12,6 +12,7 @@ import {productPageImages} from './Product'
 import {employeeExcellenceImages} from "./EmployeeExcellence"
 import {emotionalIntelligenceImages} from "./EmotionalIntelligence"
 import {healthyBodyMindImages} from "./HealthyBodyMind"
+import {paymentImages} from './Payment'
 
 export const Images = {
   headerImages: headerImages,
@@ -27,6 +28,7 @@ export const Images = {
        productImages: productPageImages,
        employeeExcellenceImages: employeeExcellenceImages,
        emotionalIntelligenceImages: emotionalIntelligenceImages,
-       healthyBodyMindImages: healthyBodyMindImages
+       healthyBodyMindImages: healthyBodyMindImages,
+       paymentImages: paymentImages
      
 };
