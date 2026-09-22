@@ -9,3 +9,8 @@ export {default as PlayIcon } from "./PlayIcon"
 export {default as ClockIcon} from "./ClockIcon"
 export {default as BigThumb} from "./BigThumb"
 export {default as ScrollDownIcon} from "./ScrollDownIcon"
+export { default as RedCrossIcon } from "./RedCrossIcon";
+export { default as LightModeIcon } from "./LightModeIcon";
+export { default as BigGreenCheckIcon } from "./BigGreenCheckIcon";
+export { default as BigRedCrossIcon } from "./BigRedCrossIcon";
+export { default as DarkModeIcon } from "./DarkModeIcon";

@@ -16,7 +16,7 @@ const PaymentPage = () => {
   return (
     <>
       <section>
-        <div className="bg-bannerCloud bg-cover py-8 md:py-16  bg-no-repeat">
+        <div className="bg-bannerWithCloud bg-cover py-8 md:py-16  bg-no-repeat">
           <div className="container max-w-8xl mx-auto px-4 md:px-8">
             <h2 className="text-3xl md:text-5xl text-telegraph mb-3 text-white  font-semibold">
               Payment
