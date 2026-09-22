@@ -92,6 +92,9 @@
   --background-image-bannerCloud: url("/images/faqsPageImages/bannerWithCloud.png");
   --background-image-bannerContactUs: url("/images/contactUsPageImages/bannerContactUs.png");
   --background-image-ProductBannerBusinessEssentials: url("/images/products/businessEssentialsPageImages/ProductBannerBusinessEssentials.jpg");
+  --background-image-ProductBannerEmployeeExcellence: url("/images/products/EmployeeExcellencePageImages/ProductBannerEmployeeExcellence.jpg");
+  --background-image-ProductBannerEmotionalIntelligence: url("/images/products/EmotionalIntelligencePageImages/ProductBannerEmotionalIntelligence.jpg");
+  --background-image-ProductBannerHealthyBodyAndMind: url("/images/products/HealthyBodyMindPageImages/ProductBannerHealthyBodyAndMind.jpg");
 
 
 }

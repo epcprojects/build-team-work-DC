@@ -9,6 +9,9 @@ import {contactUsImages} from './ContactUs'
 import {affiliateImages} from './Affiliate'
 import { businessEssentialsImages } from "./BusinessEssentials";
 import {productPageImages} from './Product'
+import {employeeExcellenceImages} from "./EmployeeExcellence"
+import {emotionalIntelligenceImages} from "./EmotionalIntelligence"
+import {healthyBodyMindImages} from "./HealthyBodyMind"
 
 export const Images = {
   headerImages: headerImages,
@@ -22,5 +25,8 @@ export const Images = {
      affiliateImages: affiliateImages,
      businessEssentialsImages: businessEssentialsImages,
        productImages: productPageImages,
+       employeeExcellenceImages: employeeExcellenceImages,
+       emotionalIntelligenceImages: emotionalIntelligenceImages,
+       healthyBodyMindImages: healthyBodyMindImages
      
 };

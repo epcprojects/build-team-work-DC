@@ -1,4 +1,5 @@
 import { BrochureCard, ListOfFeature } from "@/src/app/components/training";
+import type { StaticImageData } from "next/image";
 
 import {
   howItWork,
@@ -9,11 +10,18 @@ import { ButtonType, CyberButton } from "../forms";
 import { CartIcon } from "@/public/icons";
 import { useCart } from "../cart/useCart";
 import Image from "next/image";
-import { Images } from "../../ui/images";
 
-type Props = { onAddToCart: () => void };
+interface IndividualPaneProps {
+  courseDescription: React.ReactNode;
+  certificateImage: StaticImageData;
+  cardImage: StaticImageData;
+}
 
-export default function IndividualPane() {
+export default function IndividualPane({
+  courseDescription,
+  certificateImage,
+  cardImage,
+}: IndividualPaneProps) {
   const { addItem, openCart } = useCart();
 
   return (
@@ -54,14 +62,7 @@ export default function IndividualPane() {
           </h3>
 
           <p className="sm:text-base text-sm mb-6 text-mirage">
-            The <strong>Business Essentials Series</strong> equips employees
-            with core skills to thrive in the workplace, covering teamwork,
-            cybersecurity, customer service, harassment prevention, and more.
-            These training films provide actionable strategies to foster
-            collaboration, enhance productivity, and create a safe, inclusive
-            environment. By applying these skills, employees can contribute to
-            organizational success and build a respectful, high-performing
-            workplace.
+            {courseDescription}
           </p>
 
           <ListOfFeature
@@ -113,20 +114,14 @@ export default function IndividualPane() {
           <div className="flex flex-col sm:flex-row gap-3 mb-4">
             <div className="shrink-0">
               <Image
-                src={
-                  Images.businessEssentialsImages.businessEssentialsCertificate
-                }
+                src={certificateImage}
                 className="border w-full"
                 alt=""
               />
             </div>
             <div className="grow">
               <div className="flex flex-col items-start gap-3 w-full ">
-                <Image
-                  src={Images.businessEssentialsImages.BusinessEssentialsCard}
-                  className="border "
-                  alt=""
-                />
+                <Image src={cardImage} className="border " alt="" />
               </div>
             </div>
           </div>

@@ -21,23 +21,17 @@ const TABS: { id: Tab; label: string }[] = [
   { id: "organization", label: "Organization" },
 ];
 
-const businessEssentialsDescription = (
+const emotionalIntelligenceDescription = (
   <>
-    The <strong>Business Essentials Series</strong> equips employees with core
-    skills to thrive in the workplace, covering teamwork, cybersecurity,
-    customer service, harassment prevention, and more. These training films
-    provide actionable strategies to foster collaboration, enhance productivity,
-    and create a safe, inclusive environment. By applying these skills,
-    employees can contribute to organizational success and build a respectful,
-    high-performing workplace.
+    The <strong>Emotional Intelligence Series</strong> is a collection of HR training films that enhance teamwork, communication, and leadership. Emotional intelligence (EI) boosts productivity, resolves conflicts, and fosters strong relationships, outperforming high IQ in 70% of cases. This course covers self-awareness, empathy, conflict resolution, and decision-making, helping individuals tackle challenges and create a supportive, successful workplace.
   </>
 );
 
 const certificateImage =
-  Images.businessEssentialsImages.businessEssentialsCertificate;
-const cardImage = Images.businessEssentialsImages.BusinessEssentialsCard;
+  Images.emotionalIntelligenceImages.EmotionalIntelligenceCertificate
+const cardImage =  Images.emotionalIntelligenceImages.EmotionalIntelligenceCard
 
-const BusinessEssentialsPage = () => {
+const EmotionalIntelligencePage = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const [tab, setTab] = useState<Tab>("individual");
@@ -52,9 +46,9 @@ const BusinessEssentialsPage = () => {
 
       <ProductBanner
         audience="Everyone"
-        name="Business Essentials"
-        description="The Business Essentials Series is a collection of short HR training films that address the core and essential training required by all employees."
-        backgroundClass="bg-ProductBannerBusinessEssentials"
+        name="Emotional Intelligence"
+        description="The Emotional Intelligence Series is a set of HR training films that help organizations improve internal interactions and build strong teams."
+        backgroundClass="bg-ProductBannerEmotionalIntelligence"
       ></ProductBanner>
 
       <section className="container max-w-8xl mx-auto py-8 md:py-16">
@@ -67,26 +61,21 @@ const BusinessEssentialsPage = () => {
               </h3>
 
               <p className="text-base mb-4 text-mirage ">
-                The <strong>Business Essential Series</strong> is a powerful set
-                of short HR training films that will address the core and
-                essential trainings required by every organization including
-                teamwork, cybersecurity, customer service, harassment
-                prevention, workplace violence, effective meetings,
-                interviewing, and inclusion.
+                The <strong>Emotional Intelligence Series</strong> is a collection of impactful HR training films designed to improve teamwork and communication. Emotional intelligence (EI) is key to workplace success, boosting productivity, resolving conflicts, and inspiring leadership. By fostering employee engagement and strong relationships, EI helps create happier teams and better business outcomes, outperforming high IQ in 70% of cases.
               </p>
 
               <div className="flex gap-x-6">
                 <div className="flex gap-1 items-center">
                   <PlayIcon />
                   <span className="font-semibold sm:text-base text-sm text-mirage">
-                    Number of Videos: <span className="font-normal ">23</span>
+                    Number of Videos: <span className="font-normal ">21</span>
                   </span>
                 </div>
                 <div className="flex gap-1 items-center">
                   <ClockIcon />
                   <span className="font-semibold sm:text-base text-sm text-mirage">
                     Total Duration:{" "}
-                    <span className="font-normal ">2 hr 35 min 25 sec</span>
+                    <span className="font-normal ">2 hr 47 min</span>
                   </span>
                 </div>
               </div>
@@ -142,9 +131,15 @@ const BusinessEssentialsPage = () => {
                   hidden={tab !== "individual"}
                 >
                   <IndividualPane
-                    courseDescription={businessEssentialsDescription}
-                    certificateImage={certificateImage}
-                    cardImage={cardImage}
+                    courseDescription={
+                    emotionalIntelligenceDescription
+                    }
+                    certificateImage={
+                     certificateImage
+                    }
+                    cardImage={
+                      cardImage
+                    }
                   />
                 </div>
                 <div
@@ -152,11 +147,15 @@ const BusinessEssentialsPage = () => {
                   role="tabpanel"
                   hidden={tab !== "organization"}
                 >
-                  <OrganizationPane
-                    courseDescription={businessEssentialsDescription}
-                    certificateImage={certificateImage}
-                    cardImage={cardImage}
-                  />
+                  <OrganizationPane  courseDescription={
+                    emotionalIntelligenceDescription
+                    }
+                    certificateImage={
+                     certificateImage
+                    }
+                    cardImage={
+                      cardImage
+                    } />
                 </div>
               </div>
             </div>
@@ -187,4 +186,4 @@ const BusinessEssentialsPage = () => {
   );
 };
 
-export default BusinessEssentialsPage;
+export default EmotionalIntelligencePage;

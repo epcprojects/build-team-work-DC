@@ -31,7 +31,7 @@ export default function TrainingDetailCard({
       : training.description;
 
   return (
-    <div className="rounded-2xl hover:bg-gray-m-100 border border-gray-m-200 shadow-[0px_32px_64px_-12px_rgba(16,24,40,0.11)] mb-3 transition-transform duration-500 ease-in">
+    <div className="rounded-2xl hover:bg-gray-m-100 border border-gray-m-200 mb-3 transition-transform duration-500 ease-in">
       <div className="flex items-center p-2 md:p-2">
         <div className="grid lg:grid-cols-12 gap-6 w-full">
           {/* Video column */}

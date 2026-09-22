@@ -21,23 +21,17 @@ const TABS: { id: Tab; label: string }[] = [
   { id: "organization", label: "Organization" },
 ];
 
-const businessEssentialsDescription = (
+const employeeExcellenceDescription = (
   <>
-    The <strong>Business Essentials Series</strong> equips employees with core
-    skills to thrive in the workplace, covering teamwork, cybersecurity,
-    customer service, harassment prevention, and more. These training films
-    provide actionable strategies to foster collaboration, enhance productivity,
-    and create a safe, inclusive environment. By applying these skills,
-    employees can contribute to organizational success and build a respectful,
-    high-performing workplace.
+    The <strong>Employee Excellence Series</strong> helps employees and managers excel in customer-facing roles by enhancing communication, problem-solving, and adaptability. These training films inspire growth, foster cooperation, and provide practical strategies to improve productivity and build strong customer relationships. By applying these skills, individuals can drive organizational success and create lasting connections that support long-term excellence.
   </>
 );
 
 const certificateImage =
-  Images.businessEssentialsImages.businessEssentialsCertificate;
-const cardImage = Images.businessEssentialsImages.BusinessEssentialsCard;
+  Images.employeeExcellenceImages.EmployeeExcellenceCertificate
+const cardImage =  Images.employeeExcellenceImages.EmployeeExcellenceCard
 
-const BusinessEssentialsPage = () => {
+const EmployeeExcellencePage = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const [tab, setTab] = useState<Tab>("individual");
@@ -52,9 +46,9 @@ const BusinessEssentialsPage = () => {
 
       <ProductBanner
         audience="Everyone"
-        name="Business Essentials"
-        description="The Business Essentials Series is a collection of short HR training films that address the core and essential training required by all employees."
-        backgroundClass="bg-ProductBannerBusinessEssentials"
+        name="Employee Excellence"
+        description="The Employee Excellence Series is a set of impactful HR training films that help organizations excel in customer interactions."
+        backgroundClass="bg-ProductBannerEmployeeExcellence"
       ></ProductBanner>
 
       <section className="container max-w-8xl mx-auto py-8 md:py-16">
@@ -67,26 +61,25 @@ const BusinessEssentialsPage = () => {
               </h3>
 
               <p className="text-base mb-4 text-mirage ">
-                The <strong>Business Essential Series</strong> is a powerful set
-                of short HR training films that will address the core and
-                essential trainings required by every organization including
-                teamwork, cybersecurity, customer service, harassment
-                prevention, workplace violence, effective meetings,
-                interviewing, and inclusion.
+                The <strong>Employee Excellence Series</strong> is a collection
+                of powerful films that will inspire your employees and managers
+                to challenge their way of thinking and become more cooperative
+                and productive and help drive your organization to the next
+                level with their interactions with external-facing customers.
               </p>
 
               <div className="flex gap-x-6">
                 <div className="flex gap-1 items-center">
                   <PlayIcon />
                   <span className="font-semibold sm:text-base text-sm text-mirage">
-                    Number of Videos: <span className="font-normal ">23</span>
+                    Number of Videos: <span className="font-normal ">19</span>
                   </span>
                 </div>
                 <div className="flex gap-1 items-center">
                   <ClockIcon />
                   <span className="font-semibold sm:text-base text-sm text-mirage">
                     Total Duration:{" "}
-                    <span className="font-normal ">2 hr 35 min 25 sec</span>
+                    <span className="font-normal ">2 hr 19 min 54 sec</span>
                   </span>
                 </div>
               </div>
@@ -142,9 +135,15 @@ const BusinessEssentialsPage = () => {
                   hidden={tab !== "individual"}
                 >
                   <IndividualPane
-                    courseDescription={businessEssentialsDescription}
-                    certificateImage={certificateImage}
-                    cardImage={cardImage}
+                    courseDescription={
+                    employeeExcellenceDescription
+                    }
+                    certificateImage={
+                     certificateImage
+                    }
+                    cardImage={
+                      cardImage
+                    }
                   />
                 </div>
                 <div
@@ -152,11 +151,15 @@ const BusinessEssentialsPage = () => {
                   role="tabpanel"
                   hidden={tab !== "organization"}
                 >
-                  <OrganizationPane
-                    courseDescription={businessEssentialsDescription}
-                    certificateImage={certificateImage}
-                    cardImage={cardImage}
-                  />
+                  <OrganizationPane  courseDescription={
+                    employeeExcellenceDescription
+                    }
+                    certificateImage={
+                     certificateImage
+                    }
+                    cardImage={
+                      cardImage
+                    } />
                 </div>
               </div>
             </div>
@@ -187,4 +190,4 @@ const BusinessEssentialsPage = () => {
   );
 };
 
-export default BusinessEssentialsPage;
+export default EmployeeExcellencePage;

@@ -21,23 +21,17 @@ const TABS: { id: Tab; label: string }[] = [
   { id: "organization", label: "Organization" },
 ];
 
-const businessEssentialsDescription = (
+const healthyBodyMindDescription = (
   <>
-    The <strong>Business Essentials Series</strong> equips employees with core
-    skills to thrive in the workplace, covering teamwork, cybersecurity,
-    customer service, harassment prevention, and more. These training films
-    provide actionable strategies to foster collaboration, enhance productivity,
-    and create a safe, inclusive environment. By applying these skills,
-    employees can contribute to organizational success and build a respectful,
-    high-performing workplace.
+    The <strong>Healthy Body and Mind Series</strong> helps employees prioritize their well-being with training on topics like workplace safety, mental health, and stress management. These films offer practical strategies to build resilience, maintain balance, and navigate challenges effectively. By focusing on wellness, employees can strengthen relationships, reduce burnout, and contribute to a supportive, engaged workplace.
   </>
 );
 
 const certificateImage =
-  Images.businessEssentialsImages.businessEssentialsCertificate;
-const cardImage = Images.businessEssentialsImages.BusinessEssentialsCard;
+  Images.healthyBodyMindImages.HealthyBodyMindCertificate
+const cardImage =  Images.healthyBodyMindImages.HealthyBodyMindCard
 
-const BusinessEssentialsPage = () => {
+const HealthyBodyMindPage = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const [tab, setTab] = useState<Tab>("individual");
@@ -52,9 +46,9 @@ const BusinessEssentialsPage = () => {
 
       <ProductBanner
         audience="Everyone"
-        name="Business Essentials"
-        description="The Business Essentials Series is a collection of short HR training films that address the core and essential training required by all employees."
-        backgroundClass="bg-ProductBannerBusinessEssentials"
+        name="Healthy Body and Mind"
+        description="The Healthy Body and Mind Series is a collection of powerful HR training films focused on employee wellness and ensuring no one is left behind."
+        backgroundClass="bg-ProductBannerHealthyBodyAndMind"
       ></ProductBanner>
 
       <section className="container max-w-8xl mx-auto py-8 md:py-16">
@@ -67,26 +61,21 @@ const BusinessEssentialsPage = () => {
               </h3>
 
               <p className="text-base mb-4 text-mirage ">
-                The <strong>Business Essential Series</strong> is a powerful set
-                of short HR training films that will address the core and
-                essential trainings required by every organization including
-                teamwork, cybersecurity, customer service, harassment
-                prevention, workplace violence, effective meetings,
-                interviewing, and inclusion.
+                The <strong>Healthy Body and Mind Series</strong> is a collection of impactful HR training films dedicated to promoting employee wellness, both physically and emotionally. Covering crucial topics such as safety, ergonomics, mental health, depression, anxiety, grief, drug use, and suicide prevention, this series emphasizes the importance of fostering a supportive workplace where no one is left behind. By addressing these challenges, organizations can create a healthier, more resilient workforce and a culture of care and understanding.
               </p>
 
               <div className="flex gap-x-6">
                 <div className="flex gap-1 items-center">
                   <PlayIcon />
                   <span className="font-semibold sm:text-base text-sm text-mirage">
-                    Number of Videos: <span className="font-normal ">23</span>
+                    Number of Videos: <span className="font-normal ">29</span>
                   </span>
                 </div>
                 <div className="flex gap-1 items-center">
                   <ClockIcon />
                   <span className="font-semibold sm:text-base text-sm text-mirage">
                     Total Duration:{" "}
-                    <span className="font-normal ">2 hr 35 min 25 sec</span>
+                    <span className="font-normal ">3 hr 24 min 37 sec</span>
                   </span>
                 </div>
               </div>
@@ -142,9 +131,15 @@ const BusinessEssentialsPage = () => {
                   hidden={tab !== "individual"}
                 >
                   <IndividualPane
-                    courseDescription={businessEssentialsDescription}
-                    certificateImage={certificateImage}
-                    cardImage={cardImage}
+                    courseDescription={
+                    healthyBodyMindDescription
+                    }
+                    certificateImage={
+                     certificateImage
+                    }
+                    cardImage={
+                      cardImage
+                    }
                   />
                 </div>
                 <div
@@ -152,11 +147,15 @@ const BusinessEssentialsPage = () => {
                   role="tabpanel"
                   hidden={tab !== "organization"}
                 >
-                  <OrganizationPane
-                    courseDescription={businessEssentialsDescription}
-                    certificateImage={certificateImage}
-                    cardImage={cardImage}
-                  />
+                  <OrganizationPane  courseDescription={
+                    healthyBodyMindDescription
+                    }
+                    certificateImage={
+                     certificateImage
+                    }
+                    cardImage={
+                      cardImage
+                    } />
                 </div>
               </div>
             </div>
@@ -187,4 +186,4 @@ const BusinessEssentialsPage = () => {
   );
 };
 
-export default BusinessEssentialsPage;
+export default HealthyBodyMindPage;
