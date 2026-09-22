@@ -9,7 +9,7 @@ interface MobileMenuProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   currentPath: string;
   navLinks: Array<{ href: string; label: string }>;
-  productsDropdown: Array<{ href: string; label: string }>;
+  productsDropdown: Array<{ href: string; label: string; image: string }>;
 }
 
 const MobileMenu = ({

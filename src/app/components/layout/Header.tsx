@@ -49,29 +49,33 @@ const Header = () => {
   ];
 
   const productsDropdown = [
-    { href: "/business-essentials", label: "Business Essentials", image: "/images/products/businessIntelligence.svg" },
+    {
+      href: "/business-essentials",
+      label: "Business Essentials",
+      image: "/images/products/businessIntelligence.svg",
+    },
     {
       href: "/employee-excellence",
-      label: "Employee Excellence"
-      , image: "/images/products/employeeExcellence.svg"
+      label: "Employee Excellence",
+      image: "/images/products/employeeExcellence.svg",
     },
     {
       href: "/emotional-intelligence",
-      label: "Emotional Intelligence"
-      , image: "/images/products/emotionalIntelligence.svg"
+      label: "Emotional Intelligence",
+      image: "/images/products/emotionalIntelligence.svg",
     },
     {
       href: "/healthy-body-and-mind",
-      label: "Healthy Body and Mind"
-      , image: "/images/products/healthyBodyMind.svg"
+      label: "Healthy Body and Mind",
+      image: "/images/products/healthyBodyMind.svg",
     },
   ];
 
   return (
-    <header className=" w-full shadow-lg sticky top-0 bg-white  z-[99]">
-      <nav className="flex md:items-center justify-between md:flex-row flex-col gap-6 px-4 lg:px-0 py-4 container max-w-8xl  mx-auto bg-white ">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-12">
+    <header className=" w-full shadow-lg sticky top-0 bg-white  z-99">
+      <nav className="flex md:items-center justify-between md:flex-row flex-col gap-6 md:px-8 px-4 py-4 container max-w-8xl  mx-auto bg-white ">
+        <div className="">
+          <div className="flex items-center justify-between gap-12">
             <div className="flex ">
               <Link className="-m-1.5 p-1.5" href="/">
                 <span className="sr-only">Your Company</span>
@@ -83,8 +87,10 @@ const Header = () => {
                 />
               </Link>
             </div>
+            <div className="mr-2 md:hidden block ">
+              <MobileMenuToggle isOpen={isMenuOpen} setIsOpen={setMenuClosed} />
+            </div>
           </div>
-          <MobileMenuToggle isOpen={isMenuOpen} setIsOpen={setMenuClosed} />
         </div>
         <div className="flex items-center justify-center gap-3">
           <div className="flex flex-row lg:flex-col items-end gap-4 justify-end">
@@ -117,6 +123,10 @@ const Header = () => {
                   {itemCount}
                 </span>
               </button>
+            </div>
+
+            <div className="ml-2 md:block hidden">
+              <MobileMenuToggle isOpen={isMenuOpen} setIsOpen={setMenuClosed} />
             </div>
             <nav className="hidden lg:flex items-center gap-3">
               <Link
@@ -169,7 +179,12 @@ const Header = () => {
                         href={product.href}
                         onClick={closeDropdown}
                       >
-                        <Image src={product.image} alt="" width={24} height={20}/>
+                        <Image
+                          src={product.image}
+                          alt=""
+                          width={24}
+                          height={20}
+                        />
                         {product.label}
                       </Link>
                     ))}
@@ -191,11 +206,12 @@ const Header = () => {
                 </Link>
               ))}
             </nav>
-            <div className="md:block hidden lg:hidden">
+            {/* <div className="md:block hidden lg:hidden ">
               <button
                 id="mobileMenuBtn"
+                
                 type="button"
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 "
               >
                 <span className="sr-only">Open main menu</span>
                 <svg
@@ -213,7 +229,7 @@ const Header = () => {
                   ></path>
                 </svg>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>

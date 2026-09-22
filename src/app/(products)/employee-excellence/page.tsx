@@ -32,17 +32,13 @@ const certificateImage =
 const cardImage =  Images.employeeExcellenceImages.EmployeeExcellenceCard
 
 const EmployeeExcellencePage = () => {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  
 
   const [tab, setTab] = useState<Tab>("individual");
 
   return (
     <>
-      <FancyBoxVideo
-        isOpen={isVideoOpen}
-        videoUrl="https://www.youtube.com/watch?v=OAwKru9P2Wc"
-        onClose={() => setIsVideoOpen(false)}
-      />
+     
 
       <ProductBanner
         audience="Everyone"
@@ -68,7 +64,7 @@ const EmployeeExcellencePage = () => {
                 level with their interactions with external-facing customers.
               </p>
 
-              <div className="flex gap-x-6">
+              <div className="flex sm:flex-row flex-col gap-x-6 gap-y-1">
                 <div className="flex gap-1 items-center">
                   <PlayIcon />
                   <span className="font-semibold sm:text-base text-sm text-mirage">

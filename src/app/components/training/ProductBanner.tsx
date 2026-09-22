@@ -17,9 +17,9 @@ const ProductBanner: React.FC<ProductBannerProps> = ({
   backgroundClass,
 }) => {
   return (
-    <section>
+    <section className="">
       <div className={`${backgroundClass} bg-cover bg-position-[center_20%] py-16 bg-no-repeat`}>
-        <div className="container max-w-8xl mx-auto px-2 lg:px-0">
+        <div className="container max-w-8xl mx-auto px-4 md:px-8">
           <Breadcrumb />
 
           <h2 className="text-3xl md:text-5xl antialiased hover:subpixel-antialiased text-telegraph mb-2 text-white font-semibold">

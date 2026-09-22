@@ -56,23 +56,23 @@ const Footer = () => {
   return (
     <footer className="bottom-0 w-full">
       <div className="py-12 md:px-0 px-2 bg-midNight">
-        <div className="container max-w-8xl mx-auto">
-          <div className="grid grid-cols-12 gap-8">
-            <div className="lg:col-span-3 md:col-span-6 sm:col-span-12 col-span-12">
+        <div className="container max-w-8xl mx-auto md:px-8 px-4">
+          <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
+            <div className="">
               <div className="">
-              <Link
-  href="/"
-  className="mb-4 inline-block relative"
-  aria-label="Homepage"
->
+                <Link
+                  href="/"
+                  className="mb-4 inline-block relative"
+                  aria-label="Homepage"
+                >
                   <Image
                     src={companyInfo.logo}
-                    className="h-12"
+                    className="h-12 sm:w-[500px] w-[300px]"
                     width={500}
-                    height={500}
+                    height={100}
                     alt="Cyber Safety Training logo"
                   />
-              </Link>
+                </Link>
                 <address className="font-normal mb-3 text-white text-sm not-italic">
                   {companyInfo.address.map((line, i) => (
                     <React.Fragment key={i}>
@@ -104,7 +104,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-3 md:col-span-6 sm:col-span-12 col-span-12">
+            <div className="">
               <div className="footer-links lg:ps-8">
                 <SectionHeader>Company</SectionHeader>
                 <ul className="footer-links-ul">
@@ -117,7 +117,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-3 md:col-span-6 sm:col-span-12 col-span-12">
+            <div className="">
               <SectionHeader>Products / Services</SectionHeader>
               <ul className="footer-links-ul">
                 {navLinks.services.map((link) => (
@@ -127,7 +127,7 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            <div className="lg:col-span-3 md:col-span-6 sm:col-span-12 col-span-12">
+            <div className="">
               <div className="lg:ps-8">
                 <SectionHeader>We accept</SectionHeader>
                 <Image
@@ -141,7 +141,7 @@ const Footer = () => {
       </div>
 
       <div className="py-3 px-2 bg-navyBlue">
-        <div className="container max-w-8xl mx-auto">
+        <div className="container max-w-8xl mx-auto md:px-8 px-4">
           <p className="font-normal text-center md:text-start text-white text-sm py-3">
             © Copyright {new Date().getFullYear()} Digital Compliance, All
             Rights Reserved.

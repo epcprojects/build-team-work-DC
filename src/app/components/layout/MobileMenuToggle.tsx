@@ -11,11 +11,11 @@ const MobileMenuToggle = ({ isOpen, setIsOpen }: MobileMenuToggleProps) => {
   };
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         type="button"
         onClick={handleMenuToggle}
-        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2 text-gray-700 border-1 border-platinum"
       >
         <span className="sr-only">Open main menu</span>
         <svg

@@ -2,10 +2,11 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ProductsDropdownProps {
   currentPath: string;
-  productsDropdown: Array<{ href: string; label: string }>;
+  productsDropdown: Array<{ href: string; label: string; image: string }>;
   isMobile?: boolean;
   onClose?: () => void;
 }
@@ -85,15 +86,16 @@ const ProductsDropdown = ({
         >
           {productsDropdown.map((product) => (
             <Link
-              className={`block py-2 px-4 text-base whitespace-nowrap ${
+              className={` py-2 px-4 text-base whitespace-nowrap flex gap-2 ${
                 currentPath === product.href
-                  ? "bg-secondary text-white"
+                  ? " "
                   : "text-black hover:bg-gray-m-100"
               }`}
               key={product.href}
               href={product.href}
               onClick={closeDropdown}
             >
+               <Image src={product.image} alt="" width={24} height={20}/>
               {product.label}
             </Link>
           ))}

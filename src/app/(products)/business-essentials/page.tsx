@@ -38,18 +38,10 @@ const certificateImage =
 const cardImage = Images.businessEssentialsImages.BusinessEssentialsCard;
 
 const BusinessEssentialsPage = () => {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
-
   const [tab, setTab] = useState<Tab>("individual");
 
   return (
     <>
-      <FancyBoxVideo
-        isOpen={isVideoOpen}
-        videoUrl="https://www.youtube.com/watch?v=OAwKru9P2Wc"
-        onClose={() => setIsVideoOpen(false)}
-      />
-
       <ProductBanner
         audience="Everyone"
         name="Business Essentials"
@@ -57,8 +49,8 @@ const BusinessEssentialsPage = () => {
         backgroundClass="bg-ProductBannerBusinessEssentials"
       ></ProductBanner>
 
-      <section className="container max-w-8xl mx-auto py-8 md:py-16">
-        <div className="grid grid-cols-12 px-4 lg:px-0 gap-4 md:gap-8">
+      <section className="container max-w-8xl mx-auto py-8 md:py-16 md:px-8 px-4">
+        <div className="grid grid-cols-12  gap-4 md:gap-8">
           {/* left side */}
           <div className="col-span-12 lg:col-span-7">
             <div className="border-b border-platinum pb-6 mb-6">
@@ -75,7 +67,7 @@ const BusinessEssentialsPage = () => {
                 interviewing, and inclusion.
               </p>
 
-              <div className="flex gap-x-6">
+              <div className="flex sm:flex-row flex-col gap-x-6 gap-y-1">
                 <div className="flex gap-1 items-center">
                   <PlayIcon />
                   <span className="font-semibold sm:text-base text-sm text-mirage">
@@ -165,7 +157,7 @@ const BusinessEssentialsPage = () => {
       </section>
 
       <section className="pb-8 md:pb-16">
-        <div className="container max-w-8xl mx-auto px-4 md:px-0">
+        <div className="container max-w-8xl mx-auto md:px-8 px-4">
           <h2 className="text-xl md:text-3xl text-black   font-semibold mb-4 md:mb-10">
             Frequently Asked Questions
           </h2>
@@ -175,7 +167,7 @@ const BusinessEssentialsPage = () => {
       </section>
 
       <section className="bg-aliceBlue">
-        <div className="container max-w-8xl mx-auto px-4 lg:px-0 py-8 md:py-16">
+        <div className="container max-w-8xl mx-auto md:px-8 px-4 py-8 md:py-16">
           <h2 className="text-3xl md:text-5xl text-black text-telegraph text-center font-semibold mb-6">
             Other Trainings Available
           </h2>

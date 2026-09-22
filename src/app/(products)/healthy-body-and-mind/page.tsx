@@ -23,27 +23,24 @@ const TABS: { id: Tab; label: string }[] = [
 
 const healthyBodyMindDescription = (
   <>
-    The <strong>Healthy Body and Mind Series</strong> helps employees prioritize their well-being with training on topics like workplace safety, mental health, and stress management. These films offer practical strategies to build resilience, maintain balance, and navigate challenges effectively. By focusing on wellness, employees can strengthen relationships, reduce burnout, and contribute to a supportive, engaged workplace.
+    The <strong>Healthy Body and Mind Series</strong> helps employees prioritize
+    their well-being with training on topics like workplace safety, mental
+    health, and stress management. These films offer practical strategies to
+    build resilience, maintain balance, and navigate challenges effectively. By
+    focusing on wellness, employees can strengthen relationships, reduce
+    burnout, and contribute to a supportive, engaged workplace.
   </>
 );
 
 const certificateImage =
-  Images.healthyBodyMindImages.HealthyBodyMindCertificate
-const cardImage =  Images.healthyBodyMindImages.HealthyBodyMindCard
+  Images.healthyBodyMindImages.HealthyBodyMindCertificate;
+const cardImage = Images.healthyBodyMindImages.HealthyBodyMindCard;
 
 const HealthyBodyMindPage = () => {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
-
   const [tab, setTab] = useState<Tab>("individual");
 
   return (
     <>
-      <FancyBoxVideo
-        isOpen={isVideoOpen}
-        videoUrl="https://www.youtube.com/watch?v=OAwKru9P2Wc"
-        onClose={() => setIsVideoOpen(false)}
-      />
-
       <ProductBanner
         audience="Everyone"
         name="Healthy Body and Mind"
@@ -61,10 +58,18 @@ const HealthyBodyMindPage = () => {
               </h3>
 
               <p className="text-base mb-4 text-mirage ">
-                The <strong>Healthy Body and Mind Series</strong> is a collection of impactful HR training films dedicated to promoting employee wellness, both physically and emotionally. Covering crucial topics such as safety, ergonomics, mental health, depression, anxiety, grief, drug use, and suicide prevention, this series emphasizes the importance of fostering a supportive workplace where no one is left behind. By addressing these challenges, organizations can create a healthier, more resilient workforce and a culture of care and understanding.
+                The <strong>Healthy Body and Mind Series</strong> is a
+                collection of impactful HR training films dedicated to promoting
+                employee wellness, both physically and emotionally. Covering
+                crucial topics such as safety, ergonomics, mental health,
+                depression, anxiety, grief, drug use, and suicide prevention,
+                this series emphasizes the importance of fostering a supportive
+                workplace where no one is left behind. By addressing these
+                challenges, organizations can create a healthier, more resilient
+                workforce and a culture of care and understanding.
               </p>
 
-              <div className="flex gap-x-6">
+              <div className="flex sm:flex-row flex-col gap-x-6 gap-y-1">
                 <div className="flex gap-1 items-center">
                   <PlayIcon />
                   <span className="font-semibold sm:text-base text-sm text-mirage">
@@ -131,15 +136,9 @@ const HealthyBodyMindPage = () => {
                   hidden={tab !== "individual"}
                 >
                   <IndividualPane
-                    courseDescription={
-                    healthyBodyMindDescription
-                    }
-                    certificateImage={
-                     certificateImage
-                    }
-                    cardImage={
-                      cardImage
-                    }
+                    courseDescription={healthyBodyMindDescription}
+                    certificateImage={certificateImage}
+                    cardImage={cardImage}
                   />
                 </div>
                 <div
@@ -147,15 +146,11 @@ const HealthyBodyMindPage = () => {
                   role="tabpanel"
                   hidden={tab !== "organization"}
                 >
-                  <OrganizationPane  courseDescription={
-                    healthyBodyMindDescription
-                    }
-                    certificateImage={
-                     certificateImage
-                    }
-                    cardImage={
-                      cardImage
-                    } />
+                  <OrganizationPane
+                    courseDescription={healthyBodyMindDescription}
+                    certificateImage={certificateImage}
+                    cardImage={cardImage}
+                  />
                 </div>
               </div>
             </div>

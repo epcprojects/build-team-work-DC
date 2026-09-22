@@ -11,8 +11,10 @@ const Breadcrumb: React.FC = () => {
   const pathSegments = pathname.split("/").filter((segment) => segment);
 
   const labelMap: { [key: string]: string } = {
-    "cyber-safety-training": "Products",
-    "cyber-safety-compliance": "Products",
+    "business-essentials": "Products",
+    "employee-excellence": "Products",
+    "emotional-intelligence": "Products",
+    "healthy-body-and-mind": "Products",
     faqs: "FAQs",
     contactus: "Contact Us",
     blogdetail: "Blog Detail",
