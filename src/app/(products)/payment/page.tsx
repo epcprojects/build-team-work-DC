@@ -35,7 +35,7 @@ const PaymentPage = () => {
 
         <PaymentInformationForm />
 
-        <div className="px-4 md:px-0">
+        <div className="">
           <CyberButton
             onClick={() => router.push("/login")}
             icon={<ArrowWithTailIcon />}

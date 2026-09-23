@@ -120,7 +120,7 @@ const Quiz = () => {
               {questions[currentQuestion].options.map((option) => (
                 <label
                   className={`
-                    flex gap-4 mb-2 py-3 text-base font-normal px-4 rounded-md 
+                    flex gap-4 mb-2 py-3 text-base font-normal px-4 rounded-md  
                     ${
                       selectedOption === option.id
                         ? "bg-gray-200 dark:bg-gray-600"
@@ -150,7 +150,7 @@ const Quiz = () => {
                   key={option.id}
                 >
                   <input
-                    className={` appearance-none h-6 w-6   rounded-full cursor-pointer border-[6px]! ${
+                    className={` appearance-none h-6 w-6   rounded-full cursor-pointer border-[6px]! shrink-0 ${
                       !answerSubmitted ? "hover:accent-primary border-gray-200" : "dark:border-white border-gray-200"
                     } ${
                       answerSubmitted &&

@@ -12,8 +12,8 @@ const Tabs = () => {
   return (
     <>
       <section>
-        <div className="bg-bannerCloud bg-cover py-8 md:py-16  bg-no-repeat">
-          <div className="container max-w-8xl mx-auto px-4 lg:px-0">
+        <div className="bg-bannerWithCloud bg-cover py-8 md:py-16  bg-no-repeat">
+          <div className="container max-w-8xl mx-auto px-4 md:px-8">
             <Breadcrumb />
             <h2 className="text-3xl md:text-5xl text-telegraph text-white  font-semibold">
               Affiliate and Reseller Program
@@ -23,9 +23,9 @@ const Tabs = () => {
       </section>
 
       <section>
-        <div className="container max-w-8xl mx-auto px-4 lg:px-0 py-8 md:py-16">
+        <div className="container max-w-8xl mx-auto px-4 md:px-8 py-8 md:py-16">
           <div className="grid grid-cols-12 items-center justify-center">
-            <div className="lg:col-span-8 lg:col-start-3 flex flex-col justify-center items-center gap-4 mb-5 text-center">
+            <div className="lg:col-span-8 md:col-span-10 md:col-start-2 sm:col-span-8 sm:col-start-3 col-span-12 col-start-1 lg:col-start-3 flex flex-col justify-center items-center gap-4 mb-5 text-center">
               <Image
                 src={Images.affiliateImages.affiliate}
                 className="rounded-3xl w-full mb-4"

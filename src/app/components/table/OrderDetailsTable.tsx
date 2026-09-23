@@ -18,16 +18,16 @@ const OrderDetailsTable = () => {
         <table className="w-full ">
           <thead>
             <tr>
-              <th className="p-1.5 md:p-2 bg-iceBerg border text-start text-[10px] md:text-sm font-bold">
+              <th className="p-1.5 md:p-2 bg-iceBerg border border-platinum text-start text-[10px] md:text-sm font-bold">
                 Product Description
               </th>
-              <th className="p-1.5 md:p-2 bg-iceBerg border md:text- text-start text-[10px] md:text-sm font-bold">
+              <th className="p-1.5 md:p-2 bg-iceBerg border border-platinum md:text- text-start text-[10px] md:text-sm font-bold">
                 Quantity
               </th>
-              <th className="p-1.5 md:p-2 bg-iceBerg border  md:text-center text-start text-[10px] md:text-sm font-bold">
+              <th className="p-1.5 md:p-2 bg-iceBerg border border-platinum  md:text-center text-start text-[10px] md:text-sm font-bold">
                 Unit Price
               </th>
-              <th className="p-1.5 md:p-2 bg-iceBerg border  md:text-center text-start text-[10px] md:text-sm font-bold">
+              <th className="p-1.5 md:p-2 bg-iceBerg border border-platinum  md:text-center text-start text-[10px] md:text-sm font-bold">
                 Ext Price
               </th>
             </tr>
@@ -37,7 +37,7 @@ const OrderDetailsTable = () => {
               <tr>
                 <td
                   colSpan={4}
-                  className="p-3 md:p-4 border text-center text-sm text-gray-600"
+                  className="p-3 md:p-4 border border-platinum text-center text-sm text-gray-600"
                 >
                   No items in cart.
                 </td>
@@ -45,7 +45,7 @@ const OrderDetailsTable = () => {
             ) : (
               items.map((item) => (
                 <tr key={item.id}>
-                  <td className="p-1.5 md:p-2 border">
+                  <td className="p-1.5 md:p-2 border border-platinum">
                     <h2 className="text-[10px] md:text-sm font-normal text-start text-neutral-700">
                       {item.name}
                     </h2>
@@ -79,12 +79,12 @@ const OrderDetailsTable = () => {
                   $29.99
                 </h2>
               </td>
-              <td className="p-1.5 md:p-2 border">
+              <td className="p-1.5 md:p-2 border border-platinum">
                 <h2 className="text-[10px] md:text-sm font-bold text-end text-neutral-700">
                   SubTotal:
                 </h2>
               </td>
-              <td className="p-1.5 md:p-2 border">
+              <td className="p-1.5 md:p-2 border border-platinum">
                 <h2 className="text-[10px] md:text-sm font-bold text-end text-neutral-700">
                   {currency(subtotal)}
                 </h2>
@@ -102,12 +102,12 @@ const OrderDetailsTable = () => {
                   $29.99
                 </h2>
               </td>
-              <td className="p-1.5 md:p-2 border">
+              <td className="p-1.5 md:p-2 border border-platinum">
                 <h2 className="text-[10px] md:text-sm font-bold text-end text-neutral-700">
                   Sales Tax:
                 </h2>
               </td>
-              <td className="p-1.5 md:p-2 border">
+              <td className="p-1.5 md:p-2 border border-platinum">
                 <h2 className="text-[10px] md:text-sm font-bold text-end text-neutral-700">
                   {currency(salesTax)}
                 </h2>
@@ -125,12 +125,12 @@ const OrderDetailsTable = () => {
                   $29.99
                 </h2>
               </td>
-              <td className="p-2 border">
+              <td className="p-2 border border-platinum">
                 <h2 className="text-[10px] md:text-sm font-bold text-end text-primary">
                   Total:
                 </h2>
               </td>
-              <td className="p-2 border">
+              <td className="p-2 border border-platinum">
                 <h2 className="text-[10px] md:text-sm font-bold text-end text-primary">
                   {currency(total)}
                 </h2>

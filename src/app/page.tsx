@@ -68,7 +68,7 @@ export default function Home() {
      <TeamWorkTraining/>
 
       <section className="bg-pearl">
-        <div className="container max-w-8xl mx-auto px-2 lg:px-0 py-8 md:py-16">
+        <div className="container max-w-8xl mx-auto px-4 lg:px-8 py-8 md:py-16">
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 md:col-span-10 md:col-start-2 mb-2 md:mb-8">
               <h2 className="text-3xl md:text-5xl text-black text-telegraph text-center font-semibold mb-3 md:mb-6">
@@ -155,7 +155,7 @@ export default function Home() {
       <ResponsiveTrainingSection />
 
       <section className="bg-aliceBlue">
-        <div className="container max-w-8xl mx-auto px-4 lg:px-0 py-8 md:py-16">
+        <div className="container max-w-8xl mx-auto px-4 md:px-8 py-8 md:py-16">
           <h2 className="text-3xl md:text-5xl text-black text-telegraph text-center font-semibold mb-3 md:mb-6">
             Other Trainings Available
           </h2>

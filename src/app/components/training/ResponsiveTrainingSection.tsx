@@ -4,7 +4,7 @@ import { Images } from "../../ui/images";
 
 const ResponsiveTrainingSection: React.FC = () => {
   return (
-    <section className="py-8 md:pt-16 md:pb-20 px-4 lg:px-0">
+    <section className="py-8 md:pt-16 md:pb-20 px-4 md:px-8">
       <div className="container max-w-8xl mx-auto p-6 md:p-12 bg-design bg-no-repeat bg-cover bg-haiti rounded-3xl relative">
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-8">

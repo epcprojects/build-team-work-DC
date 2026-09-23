@@ -9,7 +9,7 @@ import { Images } from "@/src/app/ui/images";
 // Individual Tab Content Components
 const GeneralTab = () => (
   <div className="tabs-content-inner">
-    <h2 className="font-semibold text-primary text-xl md:text-3xl mb-3 md:mb-5">
+    <h2 className="font-semibold text-primary text-3xl mb-3 md:mb-5">
       General
     </h2>
 
@@ -108,7 +108,7 @@ const GeneralTab = () => (
 const CertificateTab = () => (
   <>
     <div className="tabs-content-inner">
-      <h2 className="font-semibold text-primary text-xl md:text-3xl mb-5">
+      <h2 className="font-semibold text-primary text-3xl mb-5">
         Certificate
       </h2>
 
@@ -178,7 +178,7 @@ const CertificateTab = () => (
 const PricingTab = () => (
   <>
     <div className="tabs-content-inner">
-      <h2 className="font-semibold text-primary text-xl md:text-3xl mb-5">
+      <h2 className="font-semibold text-primary text-3xl mb-5">
         Pricing
       </h2>
 
@@ -314,7 +314,7 @@ const PricingTab = () => (
 const OrganizationalTrainingTab = () => (
   <>
     <div className="tabs-content-inner">
-      <h2 className="font-semibold text-primary text-xl md:text-3xl mb-5">
+      <h2 className="font-semibold text-primary text-3xl mb-5">
         Group Training
       </h2>
 
@@ -520,7 +520,7 @@ const Tabs = () => {
     <>
       <section>
         <div className="bg-bannerCloud bg-cover bg-center py-8 md:py-16  bg-no-repeat">
-          <div className="container max-w-8xl mx-auto px-4 lg:px-0">
+          <div className="container max-w-8xl mx-auto px-4 md:px-8">
             <Breadcrumb />
             <h2 className="text-3xl md:text-5xl text-telegraph text-white  font-semibold">
               FAQs
@@ -530,7 +530,7 @@ const Tabs = () => {
       </section>
 
       <section>
-        <div className="container max-w-8xl mx-auto px-4 lg:px-0 py-8 md:py-16">
+        <div className="container max-w-8xl mx-auto px-4 md:px-8 py-8 md:py-16">
           <div className="grid grid-cols-12 gap-4 md:gap-8">
             <div className="col-span-12 md:col-span-4 lg:col-span-3 ">
               <div className=" p-4 border border-platinum rounded-lg bg-[#f9fafb]">
@@ -562,7 +562,7 @@ const Tabs = () => {
               </div>
             </div>
 
-            <div className="col-span-12 md:col-span-8 lg:col-span-9">
+            <div className="col-span-12 md:col-span-8 lg:col-span-9 mt-2">
               {renderTabContent()}
             </div>
           </div>

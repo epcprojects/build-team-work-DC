@@ -72,7 +72,7 @@ const PaymentApprovedPage = () => {
         </div>
       </section>
 
-      <section className="container max-w-8xl mx-auto mb-24 px-4 md:px-8">
+      <section className="container max-w-8xl mx-auto md:mb-20 sm:mb-16 mb-12  px-4 md:px-8">
         <div className="grid grid-cols-12 mb-5 justify-center">
           <div className="col-span-12 md:col-span-10 md:col-start-2">
             <div className="border border-platinum rounded-xl overflow-hidden bg-white">

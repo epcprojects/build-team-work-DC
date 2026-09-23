@@ -3,8 +3,8 @@ import Image from "next/image";
 const TeamWorkTraining = () => {
   return (
     <section className="bg-aliceBlue">
-      <div className="container max-w-8xl mx-auto px-4 lg:px-8 py-8 md:py-16">
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 ">
+      <div className="container max-w-8xl mx-auto px-4 md:px-8 py-8 md:py-16">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 lg:gap-5 xl:gap-8 ">
           {teamWorkTrainingData.map((training) => (
             <div
               key={training.id}

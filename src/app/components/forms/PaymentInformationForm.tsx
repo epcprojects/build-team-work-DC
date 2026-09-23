@@ -5,7 +5,7 @@ import { Images } from "../../ui/images";
 
 const PaymentInformationForm = () => {
   return (
-    <div className="grid grid-cols-12 mb-8 px-4 md:px-0">
+    <div className="grid grid-cols-12 mb-8">
       <div className="col-span-12">
         <h4 className="text-lg font-semibold mb-0.5 text-sapphireBlue">
           Payment Information
@@ -14,7 +14,7 @@ const PaymentInformationForm = () => {
           Please enter your creditcard information including your name and
           billing address that appears on your statement.
         </span>
-        <div className="rounded-xl border mt-3 p-4">
+        <div className="rounded-xl border border-platinum mt-3 p-4">
           <div className="text-sm grid grid-cols-12 gap-4">
             <div className="col-span-12 md:col-span-5 flex flex-col gap-4">
               <div className="grid grid-cols-12 gap-4">

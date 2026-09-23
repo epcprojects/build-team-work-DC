@@ -28,7 +28,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
 }) => {
   return (
     <Link href={link}>
-      <div className="p-3 md:p-6 group">
+      <div className="p-3 md:p-4 group">
         <div
           className="mb-4 bg-cover bg-no-repeat rounded-lg h-60"
           style={{ backgroundImage: `url(${image})` }}

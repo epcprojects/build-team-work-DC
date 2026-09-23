@@ -33,7 +33,7 @@ const cardData: CardItem[] = [
 const WhyChooseUsSection: React.FC = () => {
   return (
     <section>
-      <div className="container max-w-8xl mx-auto px-2 lg:px-0 py-8 md:py-16">
+      <div className="container max-w-8xl mx-auto px-4 md:px-8 py-8 md:py-16">
         <h2 className="text-3xl md:text-5xl text-black text-telegraph text-center font-semibold mb-2 md:mb-6">
           Why Choose Us?
         </h2>

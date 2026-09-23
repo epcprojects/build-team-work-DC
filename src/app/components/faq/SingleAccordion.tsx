@@ -24,7 +24,7 @@ const SingleAccordion: React.FC<SingleAccordionProps> = ({
   };
 
   return (
-    <div className="accordion p-6 bg-gray-100 select-none rounded-xl ">
+    <div className="accordion p-5 md:p-6 bg-gray-100 select-none rounded-xl ">
       <div className="accordion-item">
         <div
           className="accordion-title cursor-pointer flex items-center text-secondaryDark text-lg font-semibold justify-between"
@@ -43,7 +43,7 @@ const SingleAccordion: React.FC<SingleAccordionProps> = ({
               <span className="text-base block mb-1 font-medium text-mirage">
                 How many employees do you need to train?
               </span>
-             <div className="grid grid-cols-2 gap-y-2 gap-x-4 mt-4">
+             <div className="grid md:grid-cols-2 gap-y-2 gap-x-4 mt-4">
               <div>
                 <label className="text-sm uppercase text-mirage">Business Essentials:</label>
                  <input

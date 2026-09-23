@@ -58,7 +58,7 @@ const ContactUsPage = () => {
     <>
       <section>
         <div className="bg-bannerContactUs bg-cover py-16  bg-no-repeat">
-          <div className="container max-w-8xl mx-auto px-4 lg:px-0">
+          <div className="container max-w-8xl mx-auto px-4 md:px-8">
             <Breadcrumb />
             <h2 className="text-3xl md:text-[40px] text-telegraph mb-4 text-white  font-semibold">
               Want to get in touch?
@@ -73,7 +73,7 @@ const ContactUsPage = () => {
       </section>
 
       <section className="py-8 md:py-16 ">
-        <div className="container max-w-8xl mx-auto px-4 border-b border-platinum md:pb-12 lg:px-0">
+        <div className="container max-w-8xl mx-auto px-4 border-b border-platinum md:pb-12 md:px-8">
           <div className="grid grid-cols-12 gap-4 :gap-8">
             <div className="lg:col-span-4 col-span-12">
               <h2 className="font-medium text-xl md:text-2xl text-mirage mb-3 md:mb-6">
@@ -293,7 +293,7 @@ const ContactUsPage = () => {
       </section>
 
       <section className="pb-8 md:pb-16">
-        <div className="container max-w-8xl mx-auto px-4 md:px-0">
+        <div className="container max-w-8xl mx-auto px-4 md:px-8">
           <h2 className="text-xl md:text-3xl text-black   font-semibold mb-4 md:mb-10">
             Frequently Asked Questions
           </h2>
@@ -303,7 +303,7 @@ const ContactUsPage = () => {
       </section>
 
       <section className="bg-aliceBlue">
-        <div className="container max-w-8xl mx-auto px-4 lg:px-0 py-8 md:py-16">
+        <div className="container max-w-8xl mx-auto px-4 md:px-8 py-8 md:py-16">
           <h2 className="text-3xl md:text-5xl text-black text-telegraph text-center font-semibold mb-6">
             Other Trainings Available
           </h2>

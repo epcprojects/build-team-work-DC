@@ -87,7 +87,7 @@ const BlogPage = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-4 md:gap-8">
+        <div className="grid grid-cols-12 gap-4 lg:gap-8 md:gap-6">
           {blogPosts.map((blog) => (
             <div
               key={blog.id}
