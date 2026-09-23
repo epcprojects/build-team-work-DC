@@ -9,4 +9,6 @@ export { default as ProductBanner } from "./ProductBanner";
 export { default as TrainingSideSection } from "./TrainingSideSection";
 export { default as FinalExam } from "./FinalExam";
 export { default as LessonCard } from "./LessonCard";
+export { default as TrainingLogTable } from "./TrainingLogTable";
+export { CourseStatsCard } from "./CourseStatsCard";
 

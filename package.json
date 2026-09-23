@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^6.1.15",
+    "classnames": "^2.5.1",
     "formik": "^2.4.9",
     "next": "16.3.4",
     "plyr": "^3.8.4",
