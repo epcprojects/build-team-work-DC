@@ -4,9 +4,14 @@ import { Breadcrumb } from "@/src/app/components/ui";
 import { FaqAccordion } from "@/src/app/components/faq";
 import { TrainingList } from "@/src/app/components/training";
 import Image from "next/image";
-import { CyberInput, InputType, CyberButton, ButtonType } from "@/src/app/components/forms";
+import {
+  ThemeInput,
+  InputType,
+  CyberButton,
+  ButtonType,
+} from "@/src/app/components/forms";
 import { BusinessHours, ContactSection } from "@/src/app/components/contact";
-import  SupportIcon  from "@/public/icons/SupportIcon";
+import SupportIcon from "@/public/icons/SupportIcon";
 import { useRouter } from "next/navigation";
 import { Images } from "@/src/app/ui/images";
 const ContactUsPage = () => {
@@ -60,7 +65,8 @@ const ContactUsPage = () => {
             </h2>
 
             <p className="text-white text-sm md:text-base">
-              We&apos;d love to hear from your. Here&apos;s how you can reach us.
+              We&apos;d love to hear from your. Here&apos;s how you can reach
+              us.
             </p>
           </div>
         </div>
@@ -89,7 +95,9 @@ const ContactUsPage = () => {
                   </p>
                 </div>
                 <div>
-                  <h2 className="font-medium text-sm md:text-lg text-mirage mb-1">Hours</h2>
+                  <h2 className="font-medium text-sm md:text-lg text-mirage mb-1">
+                    Hours
+                  </h2>
                   <table>
                     <BusinessHours data={schedule}></BusinessHours>
                   </table>
@@ -121,7 +129,7 @@ const ContactUsPage = () => {
                     icon={<SupportIcon />}
                     onClick={() =>
                       router.push(
-                        "https://www.msp360.com/file-download.ashx?productAlias=cbraqs"
+                        "https://www.msp360.com/file-download.ashx?productAlias=cbraqs",
                       )
                     }
                     type={ButtonType.PRIMARY_OUTLINE}
@@ -141,7 +149,7 @@ const ContactUsPage = () => {
                 <form action="">
                   <div className="grid grid-cols-12 gap-4">
                     <div className="col-span-12 md:mb-2">
-                      <CyberInput
+                      <ThemeInput
                         id="username"
                         type={InputType.TEXT}
                         name="username"
@@ -183,7 +191,7 @@ const ContactUsPage = () => {
                                 {country}
                               </option>
                             ))}
-                          </select> 
+                          </select>
                           {/* <Image
                             alt=""
                             src={Images.contactUsImages.errorIcon}
@@ -197,8 +205,8 @@ const ContactUsPage = () => {
                       </label>
                     </div>
 
-                      <div className="col-span-12 md:mb-2">
-                      <CyberInput
+                    <div className="col-span-12 md:mb-2">
+                      <ThemeInput
                         id="username"
                         type={InputType.EMAIL}
                         name="username"
@@ -212,7 +220,7 @@ const ContactUsPage = () => {
                     </div>
 
                     <div className="col-span-12 md:mb-2">
-                      <CyberInput
+                      <ThemeInput
                         id="telephone"
                         label=""
                         type={InputType.TEXT}
@@ -227,7 +235,7 @@ const ContactUsPage = () => {
                     </div>
 
                     <div className="col-span-12 md:mb-2">
-                      <CyberInput
+                      <ThemeInput
                         id="telephone"
                         label=""
                         type={InputType.TEXT}

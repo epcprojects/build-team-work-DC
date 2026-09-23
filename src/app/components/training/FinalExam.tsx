@@ -7,7 +7,7 @@ import {
   BigRedCrossIcon,
   RedCrossIcon,
 } from "@/public/icons";
-import CyberInput from "../forms/CyberInput";
+import ThemeInput from "../forms/ThemeInput";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import ThemeToggle from "../ui/ThemeToggle";
@@ -30,22 +30,22 @@ const Quiz = () => {
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [answerSubmitted, setAnswerSubmitted] = useState(false);
- const [darkMode, setDarkMode] = useState(() => {
-  if (typeof window === "undefined") return false;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches;
-});
-const router = useRouter();
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
+  const router = useRouter();
 
   // Effect to check system preference for dark mode
   useEffect(() => {
-  if (typeof window === "undefined") return;
+    if (typeof window === "undefined") return;
 
-  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const handleChange = (e: MediaQueryListEvent) => setDarkMode(e.matches);
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e: MediaQueryListEvent) => setDarkMode(e.matches);
 
-  mediaQuery.addEventListener("change", handleChange);
-  return () => mediaQuery.removeEventListener("change", handleChange);
-}, []);
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -102,7 +102,7 @@ const router = useRouter();
         <div>
           <div className="bg-gray-100  px-8 py-3 dark:bg-gray-800 flex items-center justify-between dark:border-t-gray-800 border-t">
             <h2 className="text-2xl font-semibold dark:text-white">
-              Final Exam 
+              Final Exam
             </h2>
             <div className="flex items-center gap-3">
               <h3 className="text-lg font-medium mt-1 dark:text-white">
@@ -157,8 +157,8 @@ const router = useRouter();
                       option.id === questions[currentQuestion].correctAnswer
                         ? "checked:border-green-500 border-green-500 accent-green-500"
                         : answerSubmitted && selectedOption === option.id
-                        ? "checked:border-red-500 border-red-500 accent-red-500"
-                        : "group-hover:border-primary checked:border-primary"
+                          ? "checked:border-red-500 border-red-500 accent-red-500"
+                          : "group-hover:border-primary checked:border-primary"
                     } `}
                     type="radio"
                     id={option.id}
@@ -287,7 +287,7 @@ const router = useRouter();
           </div>
           {(score / questions.length) * 100 > 80 ? (
             <div className="w-full flex flex-col gap-4">
-              <CyberInput
+              <ThemeInput
                 name="name"
                 label="Enter your name as you want to appear on your Certificate"
                 placeholder="Enter name"
@@ -297,9 +297,9 @@ const router = useRouter();
                 id="name"
                 error={false}
                 errorMessage="Name is Required"
-              ></CyberInput>
+              ></ThemeInput>
 
-              <CyberInput
+              <ThemeInput
                 name="email"
                 label="and email a copy to me at:"
                 placeholder="Email Address"
@@ -309,7 +309,7 @@ const router = useRouter();
                 id="email"
                 error={false}
                 errorMessage="Name is Required"
-              ></CyberInput>
+              ></ThemeInput>
               <div className="justify-center flex">
                 <CyberButton
                   onClick={() => setShowCertificate(true)}

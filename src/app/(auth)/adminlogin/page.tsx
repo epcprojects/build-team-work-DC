@@ -7,7 +7,7 @@ import {
   CheckBoxWithLabel,
   CyberButton,
   ButtonType,
-  CyberInput,
+  ThemeInput,
   InputType,
 } from "@/src/app/components/forms";
 import Image from "next/image";
@@ -44,7 +44,7 @@ const AdminLoginPage = () => {
                   </h2>
 
                   <form onSubmit={formik.handleSubmit} className="space-y-2">
-                    <CyberInput
+                    <ThemeInput
                       id="username"
                       label="Username"
                       name="username"
@@ -53,12 +53,14 @@ const AdminLoginPage = () => {
                       value={formik.values.username}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      error={Boolean(formik.touched.username && formik.errors.username)}
+                      error={Boolean(
+                        formik.touched.username && formik.errors.username,
+                      )}
                       errorMessage={formik.errors.username}
                       height="40px"
                     />
 
-                    <CyberInput
+                    <ThemeInput
                       id="password"
                       label="Password"
                       type={InputType.PASSWORD}
@@ -68,12 +70,14 @@ const AdminLoginPage = () => {
                       value={formik.values.password}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      error={Boolean(formik.touched.password && formik.errors.password)}
+                      error={Boolean(
+                        formik.touched.password && formik.errors.password,
+                      )}
                       errorMessage={formik.errors.password}
                       height="40px"
                     />
 
-                    <CyberInput
+                    <ThemeInput
                       id="adminpin"
                       label="Admin Pin"
                       name="adminpin"
@@ -82,7 +86,9 @@ const AdminLoginPage = () => {
                       value={formik.values.adminpin}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      error={Boolean(formik.touched.adminpin && formik.errors.adminpin)}
+                      error={Boolean(
+                        formik.touched.adminpin && formik.errors.adminpin,
+                      )}
                       errorMessage={formik.errors.adminpin}
                       height="40px"
                     />

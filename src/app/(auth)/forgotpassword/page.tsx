@@ -6,7 +6,7 @@ import { TrainingList } from "@/src/app/components/training";
 import {
   CyberButton,
   ButtonType,
-  CyberInput,
+  ThemeInput,
   InputType,
 } from "@/src/app/components/forms";
 
@@ -38,7 +38,7 @@ const ForgotPasswordPage = () => {
               </p>
 
               <form onSubmit={formik.handleSubmit} className="space-y-3">
-                <CyberInput
+                <ThemeInput
                   id="username"
                   label="Username"
                   type={InputType.TEXT}
@@ -48,7 +48,9 @@ const ForgotPasswordPage = () => {
                   value={formik.values.username}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  error={Boolean(formik.touched.username && formik.errors.username)}
+                  error={Boolean(
+                    formik.touched.username && formik.errors.username,
+                  )}
                   errorMessage={formik.errors.username}
                 />
 

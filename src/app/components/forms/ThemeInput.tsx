@@ -6,7 +6,7 @@ import { Images } from "../../ui/images";
 export const InputType = {
   TEXT: "text",
   PASSWORD: "password",
-  EMAIL: "email"
+  EMAIL: "email",
 };
 
 interface InputProps {
@@ -26,7 +26,7 @@ interface InputProps {
   height?: string; // <-- Added height prop
 }
 
-const CyberInput: React.FC<InputProps> = ({
+const ThemeInput: React.FC<InputProps> = ({
   id,
   label,
   type = InputType.TEXT,
@@ -119,4 +119,4 @@ const CyberInput: React.FC<InputProps> = ({
   );
 };
 
-export default CyberInput;
+export default ThemeInput;

@@ -8,7 +8,7 @@ import {
   CheckBoxWithLabel,
   CyberButton,
   ButtonType,
-  CyberInput,
+  ThemeInput,
   InputType,
   LanguageToggle,
 } from "@/src/app/components/forms";
@@ -51,7 +51,7 @@ const LoginPage = () => {
                   </h2>
 
                   <form onSubmit={formik.handleSubmit} className="space-y-2">
-                    <CyberInput
+                    <ThemeInput
                       id="username"
                       label="Username"
                       name="username"
@@ -60,12 +60,14 @@ const LoginPage = () => {
                       value={formik.values.username}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      error={Boolean(formik.touched.username && formik.errors.username)}
+                      error={Boolean(
+                        formik.touched.username && formik.errors.username,
+                      )}
                       errorMessage={formik.errors.username}
                       height="40px"
                     />
 
-                    <CyberInput
+                    <ThemeInput
                       id="password"
                       label="Password"
                       type={InputType.PASSWORD}
@@ -75,7 +77,9 @@ const LoginPage = () => {
                       value={formik.values.password}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      error={Boolean(formik.touched.password && formik.errors.password)}
+                      error={Boolean(
+                        formik.touched.password && formik.errors.password,
+                      )}
                       errorMessage={formik.errors.password}
                       height="40px"
                     />
