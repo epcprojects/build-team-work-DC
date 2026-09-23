@@ -63,7 +63,7 @@ const Modal: React.FC<ModalProps> = ({
 
   return (
     <Portal>
-      <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-75 md:p-0 p-3">
+      <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/75 md:p-0 p-3">
         <div
           ref={modalRef}
           className={`bg-white rounded-lg shadow-lg  w-full overflow-hidden relative ${

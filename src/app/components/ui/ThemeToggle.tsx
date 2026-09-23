@@ -34,7 +34,7 @@ useEffect(() => {
   };
 
   return (
-    <button onClick={toggleDarkMode}>
+    <button onClick={toggleDarkMode} className="cursor-pointer">
       {darkMode ? <DarkModeIcon /> : <LightModeIcon />}
     </button>
   );

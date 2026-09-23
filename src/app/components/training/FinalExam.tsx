@@ -5,9 +5,10 @@ import CyberButton from "../forms/CyberButton";
 import {
   BigGreenCheckIcon,
   BigRedCrossIcon,
+  LightModeIcon,
   RedCrossIcon,
 } from "@/public/icons";
-import ThemeInput from "../forms/ThemeInput";
+import ThemeInput from "@/src/app/components/forms/ThemeInput";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import ThemeToggle from "../ui/ThemeToggle";
@@ -30,13 +31,13 @@ const Quiz = () => {
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [answerSubmitted, setAnswerSubmitted] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
+  const router = useRouter();
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window === "undefined") return false;
     return window.matchMedia("(prefers-color-scheme: dark)").matches;
   });
-  const router = useRouter();
 
-  // Effect to check system preference for dark mode
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -149,13 +150,13 @@ const Quiz = () => {
                   key={option.id}
                 >
                   <input
-                    className={`w-12 checkbox border-[6px] ${
-                      !answerSubmitted ? "hover:accent-primary" : ""
+                    className={` appearance-none h-6 w-6   rounded-full cursor-pointer border-[6px]! ${
+                      !answerSubmitted ? "hover:accent-primary border-gray-200" : "dark:border-white border-gray-200"
                     } ${
                       answerSubmitted &&
                       selectedOption === option.id &&
                       option.id === questions[currentQuestion].correctAnswer
-                        ? "checked:border-green-500 border-green-500 accent-green-500"
+                        ? "checked:border-green-500 border-green-500 accent-green-500 "
                         : answerSubmitted && selectedOption === option.id
                           ? "checked:border-red-500 border-red-500 accent-red-500"
                           : "group-hover:border-primary checked:border-primary"
