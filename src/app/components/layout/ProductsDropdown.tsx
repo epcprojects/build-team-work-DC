@@ -9,12 +9,14 @@ interface ProductsDropdownProps {
   productsDropdown: Array<{ href: string; label: string; image: string }>;
   isMobile?: boolean;
   onClose?: () => void;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ProductsDropdown = ({
   currentPath,
   productsDropdown,
   isMobile = false,
+  setIsOpen,
   onClose,
 }: ProductsDropdownProps) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -28,6 +30,10 @@ const ProductsDropdown = ({
     setDropdownOpen(false);
     if (onClose) onClose();
   };
+
+  const isProductActive = productsDropdown.some(
+    (product) => currentPath === product.href,
+  );
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -48,15 +54,19 @@ const ProductsDropdown = ({
 
   return (
     <div
-      className={isMobile ? "relative w-full" : "relative"}
+      className={`  ${
+        isMobile
+          ? "relative w-full border-b border-[#dfdfdf] rounded-lg hover:bg-[#f1f1f1]"
+          : "relative"
+      }  `}
       ref={dropdownRef}
     >
       <button
         onClick={toggleDropdown}
-        className={`nav-link flex items-center gap-3 text-base ${
+        className={`nav-link  flex items-center justify-between gap-3 text-base w-full cursor-pointer ${
           isMobile ? "w-full justify-between" : ""
         } rounded-lg py-2 px-4 ${
-          currentPath.startsWith("/cyber-safety")
+          isProductActive
             ? "bg-secondary text-white"
             : "text-black hover:bg-gray-m-100"
         }`}
@@ -86,6 +96,10 @@ const ProductsDropdown = ({
         >
           {productsDropdown.map((product) => (
             <Link
+              onClick={() => {
+                closeDropdown();
+                setIsOpen(false);
+              }}
               className={` py-2 px-4 text-base whitespace-nowrap flex gap-2 ${
                 currentPath === product.href
                   ? " "
@@ -93,9 +107,9 @@ const ProductsDropdown = ({
               }`}
               key={product.href}
               href={product.href}
-              onClick={closeDropdown}
+              // onClick={closeDropdown}
             >
-               <Image src={product.image} alt="" width={24} height={20}/>
+              <Image src={product.image} alt="" width={24} height={20} />
               {product.label}
             </Link>
           ))}

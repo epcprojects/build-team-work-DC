@@ -14,7 +14,7 @@ const TrainingList = () => {
           >
             <img src={training.image} className="w-full" alt={training.title} />
 
-            <div className="px-6 py-3 bg-white flex-1">
+            <div className="px-6 py-3 bg-white flex-1 border-b border-platinum">
               <h2 className="font-semibold text-lg md:text-xl mb-1">
                 {training.title}
               </h2>
@@ -23,7 +23,7 @@ const TrainingList = () => {
               </p>
             </div>
 
-            <div className="relative text-center flex items-center justify-center text-primary w-full py-2.5 bg-white border-t duration-300 group-hover:text-white gap-3 overflow-hidden">
+            <div className="relative text-center flex items-center justify-center text-primary w-full py-2.5 bg-white  duration-300 group-hover:text-white gap-3 overflow-hidden">
               <span className="relative z-10 text-sm md:text-base font-medium">
                 Learn more
               </span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import type { TrainingDetail } from "@/src/app/data/trainingDetails";
 
 import dynamic from "next/dynamic";
@@ -24,6 +24,34 @@ export default function TrainingDetailCard({
 }: TrainingDetailCardProps) {
   const [expanded, setExpanded] = useState(false);
 
+  const plyrSource = useMemo(
+  () => ({
+    type: "video" as const,
+    poster: training.poster,
+    sources: [
+      {
+        src: training.videoSrc,
+        type: "video/mp4",
+      },
+    ],
+  }),
+  [training.poster, training.videoSrc]
+);
+
+const plyrOptions = useMemo(
+  () => ({
+    controls: [
+      "play-large",
+      "play",
+      "progress",
+      "volume",
+      "captions",
+      "fullscreen",
+    ],
+  }),
+  []
+);
+
   const isLong = training.description.length > MAX_CHARS_BEFORE_TRUNCATE;
   const displayText =
     isLong && !expanded
@@ -37,28 +65,7 @@ export default function TrainingDetailCard({
           {/* Video column */}
           <div className="lg:col-span-5 xl:col-span-4">
             <div className="rounded-2xl overflow-hidden cursor-pointer">
-              <Plyr
-                source={{
-                  type: "video",
-                  poster: training.poster,
-                  sources: [
-                    {
-                      src: training.videoSrc,
-                      type: "video/mp4",
-                    },
-                  ],
-                }}
-                options={{
-                  controls: [
-                    "play-large",
-                    "play",
-                    "progress",
-                    "volume",
-                    "captions",
-                    "fullscreen",
-                  ],
-                }}
-              />
+             <Plyr source={plyrSource} options={plyrOptions} />
             </div>
           </div>
 

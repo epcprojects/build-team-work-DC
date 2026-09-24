@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "plyr-react/plyr.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -37,6 +38,7 @@
   --color-gray-m-300: #CDD5DF;
   --color-gray-m-600: #4B5565;
   --color-gray-m-400: #9AA4B2;
+  --color-gray-m-500: #9e9e9e;
 
   --color-midNight: #011f3d;
   --color-navyBlue: #0a152f;
@@ -286,4 +288,17 @@ body {
     transform: translate(0, 0px);
     opacity: 0.6;
   }
+}
+
+.plyr__poster {
+  z-index: 1;
+}
+
+.plyr__control--overlaid {
+  z-index: 3 !important;
+  pointer-events: auto !important;
+}
+
+.plyr__control--overlaid svg {
+  pointer-events: none;
 }
