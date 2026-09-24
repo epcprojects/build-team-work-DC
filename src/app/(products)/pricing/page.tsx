@@ -73,6 +73,7 @@ const PricingPage = () => {
                       icon={<CartIcon />}
                       onClick={handleAddToCart}
                       paddings="px-5 py-2 md:py-3"
+                       dropdown
                     >
                       Add to Cart
                     </ThemeButton>
@@ -81,6 +82,7 @@ const PricingPage = () => {
                       type={ButtonType.PRIMARY_OUTLINE}
                       onClick={() => router.push("/cyber-safety-training")}
                       paddings="px-5 py-2 md:py-3"
+                        dropdown
                     >
                       Learn more
                     </ThemeButton>
