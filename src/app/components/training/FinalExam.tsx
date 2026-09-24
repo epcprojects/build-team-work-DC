@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import CyberButton from "../forms/CyberButton";
+import ThemeButton from "../forms/ThemeButton";
 import {
   BigGreenCheckIcon,
   BigRedCrossIcon,
@@ -90,9 +90,9 @@ const Quiz = () => {
             alt="certificate"
             src="/images/certificateWithMedicalCard.png"
           ></Image>
-          <CyberButton onClick={() => router.push("/")} paddings="px-5 py-2.5">
+          <ThemeButton onClick={() => router.push("/")} paddings="px-5 py-2.5">
             Download/Print Certificate
-          </CyberButton>
+          </ThemeButton>
         </div>
       </div>
     );
@@ -151,7 +151,9 @@ const Quiz = () => {
                 >
                   <input
                     className={` appearance-none h-6 w-6   rounded-full cursor-pointer border-[6px]! shrink-0 ${
-                      !answerSubmitted ? "hover:accent-primary border-gray-200" : "dark:border-white border-gray-200"
+                      !answerSubmitted
+                        ? "hover:accent-primary border-gray-200"
+                        : "dark:border-white border-gray-200"
                     } ${
                       answerSubmitted &&
                       selectedOption === option.id &&
@@ -214,19 +216,19 @@ const Quiz = () => {
               )}
             </div>
             {answerSubmitted ? (
-              <CyberButton onClick={handleNextQuestion} paddings="px-5 py-1.5">
+              <ThemeButton onClick={handleNextQuestion} paddings="px-5 py-1.5">
                 {currentQuestion + 1 < questions.length
                   ? "Next"
                   : "See Results"}
-              </CyberButton>
+              </ThemeButton>
             ) : (
-              <CyberButton
+              <ThemeButton
                 onClick={handleAnswerSubmit}
                 paddings="px-5 py-1.5"
                 disabled={!selectedOption}
               >
                 Submit
-              </CyberButton>
+              </ThemeButton>
             )}
           </div>
         </div>
@@ -312,12 +314,12 @@ const Quiz = () => {
                 errorMessage="Name is Required"
               ></ThemeInput>
               <div className="justify-center flex">
-                <CyberButton
+                <ThemeButton
                   onClick={() => setShowCertificate(true)}
                   paddings="px-5 py-2.5"
                 >
                   Generate Certificate
-                </CyberButton>
+                </ThemeButton>
               </div>
             </div>
           ) : (
@@ -334,7 +336,7 @@ const Quiz = () => {
                 satisfied with your score.
               </p>
 
-              <CyberButton
+              <ThemeButton
                 onClick={() => {
                   setCurrentQuestion(0);
                   setScore(0);
@@ -345,7 +347,7 @@ const Quiz = () => {
                 paddings="px-5 py-2.5 bg-red-500 border-red-500 hover:bg-red-600 hover:border-red-600"
               >
                 Back to Training
-              </CyberButton>
+              </ThemeButton>
             </>
           )}
         </div>

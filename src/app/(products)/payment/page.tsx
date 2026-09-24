@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import {
-  CyberButton,
+  ThemeButton,
   ButtonType,
   AdministrativeInformationForm,
   PaymentInformationForm,
@@ -36,7 +36,7 @@ const PaymentPage = () => {
         <PaymentInformationForm />
 
         <div className="">
-          <CyberButton
+          <ThemeButton
             onClick={() => router.push("/login")}
             icon={<ArrowWithTailIcon />}
             paddings="md:px-6 py-2 px-4 md:py-3 flex-row-reverse gap-3 w-full md:w-fit"
@@ -46,7 +46,7 @@ const PaymentPage = () => {
             <span className="text-sm md:text-base font-semibold">
               Authorize Payment
             </span>
-          </CyberButton>
+          </ThemeButton>
         </div>
       </section>
     </>

@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { CartIcon } from "@/public/icons";
 import { FaqAccordion, SingleAccordion } from "@/src/app/components/faq";
-import { CyberButton, ButtonType } from "@/src/app/components/forms";
+import { ThemeButton, ButtonType } from "@/src/app/components/forms";
 import { useCart } from "@/src/app/components/cart/useCart";
 import {
   FeatureList,
@@ -68,22 +68,22 @@ const PricingPage = () => {
                   </div>
 
                   <div className="flex flex-col lg:flex-row items-center justify-between gap-4 mt-4 py-2">
-                    <CyberButton
+                    <ThemeButton
                       fullWidth
                       icon={<CartIcon />}
                       onClick={handleAddToCart}
                       paddings="px-5 py-2 md:py-3"
                     >
                       Add to Cart
-                    </CyberButton>
-                    <CyberButton
+                    </ThemeButton>
+                    <ThemeButton
                       fullWidth
                       type={ButtonType.PRIMARY_OUTLINE}
                       onClick={() => router.push("/cyber-safety-training")}
                       paddings="px-5 py-2 md:py-3"
                     >
                       Learn more
-                    </CyberButton>
+                    </ThemeButton>
                   </div>
                 </div>
 

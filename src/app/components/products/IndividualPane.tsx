@@ -1,4 +1,4 @@
-import {  ListOfFeature } from "@/src/app/components/products";
+import { ListOfFeature } from "@/src/app/components/products";
 import { BrochureCard } from "@/src/app/components/training";
 import type { StaticImageData } from "next/image";
 
@@ -7,7 +7,7 @@ import {
   individualCourseFeatures,
   individualProductOverview,
 } from "../../data/productPageData";
-import { ButtonType, CyberButton } from "../forms";
+import { ButtonType, ThemeButton } from "../forms";
 import { CartIcon } from "@/public/icons";
 import { useCart } from "../cart/useCart";
 import Image from "next/image";
@@ -39,7 +39,7 @@ export default function IndividualPane({
         </span>
       </div>
 
-      <CyberButton
+      <ThemeButton
         fullWidth
         type={ButtonType.PRIMARY}
         icon={<CartIcon />}
@@ -54,7 +54,7 @@ export default function IndividualPane({
         paddings="px-5 py-2 md:py-3 mb-4"
       >
         Add to Cart
-      </CyberButton>
+      </ThemeButton>
 
       <div>
         <div className="border-b border-platinum">
@@ -114,11 +114,7 @@ export default function IndividualPane({
 
           <div className="flex flex-col sm:flex-row gap-3 mb-4">
             <div className="shrink-0">
-              <Image
-                src={certificateImage}
-                className="border w-full"
-                alt=""
-              />
+              <Image src={certificateImage} className="border w-full" alt="" />
             </div>
             <div className="grow">
               <div className="flex flex-col items-start gap-3 w-full ">

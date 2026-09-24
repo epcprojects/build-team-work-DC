@@ -6,7 +6,7 @@ import { TrainingList } from "@/src/app/components/training";
 import Link from "next/link";
 import {
   CheckBoxWithLabel,
-  CyberButton,
+  ThemeButton,
   ButtonType,
   ThemeInput,
   InputType,
@@ -96,13 +96,13 @@ const LoginPage = () => {
                       onChange={() => setIsChecked(!isChecked)}
                     />
 
-                    <CyberButton
+                    <ThemeButton
                       type={ButtonType.SECONDARY}
                       htmlType="submit"
                       disabled={!formik.isValid || formik.isSubmitting}
                     >
                       Login
-                    </CyberButton>
+                    </ThemeButton>
                   </form>
                 </div>
 

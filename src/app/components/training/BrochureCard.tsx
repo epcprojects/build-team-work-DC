@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
 import React from "react";
 import { useRouter } from "next/navigation";
-import CyberButton, { ButtonType } from "../forms/CyberButton";
-import  ArrowDownIcon  from "@/public/icons/ArrowDownIcon";
+import ThemeButton, { ButtonType } from "../forms/ThemeButton";
+import ArrowDownIcon from "@/public/icons/ArrowDownIcon";
 import Image from "next/image";
 import { Images } from "../../ui/images";
 
@@ -33,7 +33,7 @@ const BrochureCard: React.FC<BrochureCardProps> = ({
       </div>
       <div>
         <h3 className="font-semibold text-sm md:text-lg mb-3">{title}</h3>
-        <CyberButton
+        <ThemeButton
           onClick={() => router.push(`/assets/${filename}`)}
           type={
             buttonType === "secondary"
@@ -44,7 +44,7 @@ const BrochureCard: React.FC<BrochureCardProps> = ({
           paddings="px-4 md:px-5 py-1.5 md:py-2.5"
         >
           <span className="font-medium">Download Brochure</span>
-        </CyberButton>
+        </ThemeButton>
       </div>
     </div>
   );

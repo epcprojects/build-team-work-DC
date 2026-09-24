@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { Breadcrumb } from "@/src/app/components/ui";
 import { Images } from "@/src/app/ui/images";
-import  SupportIcon  from "@/public/icons/SupportIcon";
-import { CyberButton, ButtonType } from "@/src/app/components/forms";
+import SupportIcon from "@/public/icons/SupportIcon";
+import { ThemeButton, ButtonType } from "@/src/app/components/forms";
 import { useRouter } from "next/navigation";
 // Main Tabs Component
 const Tabs = () => {
@@ -35,7 +35,7 @@ const Tabs = () => {
                 Please contact us for more information
               </p>
 
-              <CyberButton
+              <ThemeButton
                 icon={<SupportIcon />}
                 onClick={() => router.push("tel:+1-512-402-5963")}
                 type={ButtonType.PRIMARY_OUTLINE}
@@ -43,7 +43,7 @@ const Tabs = () => {
                 className="w-32 px-6 py-2.5"
               >
                 +1-512-402-5963
-              </CyberButton>
+              </ThemeButton>
             </div>
           </div>
         </div>

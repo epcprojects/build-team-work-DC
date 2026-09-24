@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { TrainingList } from "@/src/app/components/training";
 import {
   CheckBoxWithLabel,
-  CyberButton,
+  ThemeButton,
   ButtonType,
   ThemeInput,
   InputType,
@@ -98,13 +98,13 @@ const AdminLoginPage = () => {
                       onChange={() => setIsChecked(!isChecked)}
                     />
 
-                    <CyberButton
+                    <ThemeButton
                       type={ButtonType.SECONDARY}
                       htmlType="submit"
                       disabled={!formik.isValid || formik.isSubmitting}
                     >
                       Login
-                    </CyberButton>
+                    </ThemeButton>
                   </form>
                 </div>
 

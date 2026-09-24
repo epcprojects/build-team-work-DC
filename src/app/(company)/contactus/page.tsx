@@ -7,7 +7,7 @@ import Image from "next/image";
 import {
   ThemeInput,
   InputType,
-  CyberButton,
+  ThemeButton,
   ButtonType,
 } from "@/src/app/components/forms";
 import { BusinessHours, ContactSection } from "@/src/app/components/contact";
@@ -125,7 +125,7 @@ const ContactUsPage = () => {
                 <ContactSection contacts={contacts} />
 
                 <div className="mb-4 mt-8">
-                  <CyberButton
+                  <ThemeButton
                     icon={<SupportIcon />}
                     onClick={() =>
                       router.push(
@@ -136,7 +136,7 @@ const ContactUsPage = () => {
                     animateIconClasses="w-6"
                   >
                     Remote Support
-                  </CyberButton>
+                  </ThemeButton>
                 </div>
               </div>
             </div>
@@ -277,12 +277,12 @@ const ContactUsPage = () => {
                     </div>
 
                     <div className="col-span-12 flex justify-end">
-                      <CyberButton
+                      <ThemeButton
                         type={ButtonType.PRIMARY}
                         paddings="py-2 md:py-3.5 px-5 md:px-8"
                       >
                         Send Message
-                      </CyberButton>
+                      </ThemeButton>
                     </div>
                   </div>
                 </form>

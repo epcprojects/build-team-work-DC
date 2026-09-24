@@ -1,22 +1,16 @@
 import React from "react";
 import { TrainingLogTable } from "../training";
 import Image from "next/image";
-import { ButtonType, CyberButton } from "../forms";
+import { ButtonType, ThemeButton } from "../forms";
 import { ArrowDownIcon, TrainingLogIcon } from "@/public/icons";
 import { CertificateData } from "../../(dashboard)/dashboard/page";
-
-
 
 interface TrainingLogProps {
   certificates: CertificateData[];
   onDownload: (certificate: CertificateData) => void;
 }
 
-
-const TrainingLog = ({
-  certificates,
-  onDownload,
-}: TrainingLogProps) => {
+const TrainingLog = ({ certificates, onDownload }: TrainingLogProps) => {
   return (
     <div className="rounded-xl overflow-hidden bg-white">
       <div className="flex gap-2 border-b items-center  py-3 bg-astronautBlue px-4">
@@ -49,20 +43,20 @@ const TrainingLog = ({
               </div>
             </div>
             <div>
-              <CyberButton
+              <ThemeButton
                 icon={<ArrowDownIcon />}
                 type={ButtonType.PRIMARY}
                 paddings="px-4 py-2"
                 onClick={() => {}}
               >
                 Download
-              </CyberButton>
+              </ThemeButton>
             </div>
           </div>
           <div className="rounded-md border border-b-0 border-platinum w-full overflow-hidden">
             <TrainingLogTable
               certificates={certificates}
-    onDownload={onDownload}
+              onDownload={onDownload}
             />
           </div>
         </div>
@@ -75,14 +69,14 @@ const TrainingLog = ({
               Real Time Training Log
             </h5>
 
-            <CyberButton
+            <ThemeButton
               icon={<ArrowDownIcon />}
               type={ButtonType.PRIMARY}
               paddings="px-4 py-2"
               onClick={() => {}}
             >
               Download
-            </CyberButton>
+            </ThemeButton>
           </div>
 
           <div className="rounded-md border border-b-0 border-platinum w-full overflow-hidden">
@@ -98,7 +92,7 @@ const TrainingLog = ({
             </div>
             <TrainingLogTable
               certificates={certificates}
-    onDownload={onDownload}
+              onDownload={onDownload}
             />
             <div className="flex justify-center items-center py-3 border-b border-platinum">
               <a className=" text-primary hover:text-secondary hover:underline hover:underline-offset-4 font-semibold text-base">

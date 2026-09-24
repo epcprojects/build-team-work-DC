@@ -7,7 +7,7 @@ import {
   TeamWorkTraining,
 } from "./components/training";
 import { FancyBoxVideo } from "./components/overlays";
-import { CyberButton, ButtonType } from "./components/forms";
+import { ThemeButton, ButtonType } from "./components/forms";
 import { useRouter } from "next/navigation";
 import { WorksIcon } from "@/public/icons";
 import Image from "next/image";
@@ -64,8 +64,8 @@ export default function Home() {
         />
       </section>
 
-     {/* TeamWorkTraining */}
-     <TeamWorkTraining/>
+      {/* TeamWorkTraining */}
+      <TeamWorkTraining />
 
       <section className="bg-pearl">
         <div className="container max-w-8xl mx-auto px-4 lg:px-8 py-8 md:py-16">
@@ -104,13 +104,13 @@ export default function Home() {
                       final exam
                     </li>
                   </ul>
-                  <CyberButton
-                    onClick={() => router.push("/cyber-safety-training")}
+                  <ThemeButton
+                    onClick={() => router.push("/pricing")}
                     type={ButtonType.PRIMARY_OUTLINE}
                     paddings="py-1.5 md:px-5 md:py-2 px-4"
                   >
                     Learn more
-                  </CyberButton>
+                  </ThemeButton>
                 </div>
               </div>
             </div>
@@ -136,13 +136,13 @@ export default function Home() {
                       to you as they complete their training
                     </li>
                   </ul>
-                  <CyberButton
-                    onClick={() => router.push("/cyber-safety-compliance")}
+                  <ThemeButton
+                    onClick={() => router.push("/pricing")}
                     type={ButtonType.SECONDARY_OUTLINE}
                     paddings="py-1.5 md:px-5 md:py-2 px-4"
                   >
                     Learn more
-                  </CyberButton>
+                  </ThemeButton>
                 </div>
               </div>
             </div>

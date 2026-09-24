@@ -4,7 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { TrainingList } from "@/src/app/components/training";
 import {
-  CyberButton,
+  ThemeButton,
   ButtonType,
   ThemeInput,
   InputType,
@@ -54,14 +54,14 @@ const ForgotPasswordPage = () => {
                   errorMessage={formik.errors.username}
                 />
 
-                <CyberButton
+                <ThemeButton
                   type={ButtonType.SECONDARY}
                   htmlType="submit"
                   width="w-full"
                   disabled={!formik.isValid || formik.isSubmitting}
                 >
                   Submit
-                </CyberButton>
+                </ThemeButton>
               </form>
             </div>
           </div>

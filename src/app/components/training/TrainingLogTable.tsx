@@ -1,5 +1,5 @@
 import React from "react";
-import CyberButton, { ButtonType } from "../forms/CyberButton";
+import ThemeButton, { ButtonType } from "../forms/ThemeButton";
 import { ArrowDownIcon } from "@/public/icons";
 
 // Define the structure of each certificate
@@ -49,7 +49,7 @@ const TrainingLogTable: React.FC<TrainingLogTableProps> = ({
                 {certificate.course}
               </td>
               <td className="py-2 px-3 border-gray-200 text-gray-900 border-b">
-                <CyberButton
+                <ThemeButton
                   paddings="px-3 py-2.5"
                   type={ButtonType.PRIMARY_OUTLINE}
                   className="border-0 bg-transparent"
@@ -57,7 +57,7 @@ const TrainingLogTable: React.FC<TrainingLogTableProps> = ({
                   onClick={() => onDownload(certificate)} // <-- trigger parent handler
                 >
                   <span className="font-semibold text-sm">Download</span>
-                </CyberButton>
+                </ThemeButton>
               </td>
             </tr>
           ))}

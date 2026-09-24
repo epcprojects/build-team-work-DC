@@ -1,5 +1,5 @@
 import { BigThumb } from "@/public/icons";
-import { CyberButton, ButtonType } from "@/src/app/components/forms";
+import { ThemeButton, ButtonType } from "@/src/app/components/forms";
 import { ArrowWithTailIcon, ScrollDownIcon } from "@/public/icons";
 import Image from "next/image";
 import { Images } from "@/src/app/ui/images";
@@ -23,7 +23,10 @@ const PaymentApprovedPage = () => {
                 Please note that the charge will show on your credit card from
               </p>
               <p className="text-center text-sm md:text-base">
-                <strong className="text-primary"> &quot;Digital Compliance&quot;.</strong>
+                <strong className="text-primary">
+                  {" "}
+                  &quot;Digital Compliance&quot;.
+                </strong>
               </p>
               <p className="text-center mb-0 mt-4 text-sm md:text-base">
                 You can download a copy of the sales receipt and instructions
@@ -34,7 +37,7 @@ const PaymentApprovedPage = () => {
                 to your email address.
               </p>
 
-              <CyberButton
+              <ThemeButton
                 icon={<ArrowWithTailIcon />}
                 paddings="px-6 py-3 flex-row-reverse gap-3"
                 type={ButtonType.PRIMARY}
@@ -43,10 +46,10 @@ const PaymentApprovedPage = () => {
                 <span className="font-semibold text-sm md:text-base">
                   Continue to Training
                 </span>
-              </CyberButton>
+              </ThemeButton>
 
               <div className="md:m-6 mt-4 flex flex-col md:flex-row items-center gap-4">
-                <CyberButton
+                <ThemeButton
                   icon={<ScrollDownIcon />}
                   paddings="px-6 py-2 md:py-3 !gap-1 w-full md:w-fit"
                   type={ButtonType.PRIMARY_OUTLINE}
@@ -55,8 +58,8 @@ const PaymentApprovedPage = () => {
                   <span className="text-base font-semibold">
                     Download Receipt
                   </span>
-                </CyberButton>
-                <CyberButton
+                </ThemeButton>
+                <ThemeButton
                   icon={<ScrollDownIcon />}
                   paddings="px-6 py-2 md:py-3 !gap-1 w-full md:w-fit"
                   type={ButtonType.PRIMARY_OUTLINE}
@@ -65,7 +68,7 @@ const PaymentApprovedPage = () => {
                   <span className="text-base font-semibold">
                     Download Instructions
                   </span>
-                </CyberButton>
+                </ThemeButton>
               </div>
             </div>
           </div>
@@ -147,7 +150,7 @@ const PaymentApprovedPage = () => {
                 </div>
               </div>
 
-             <SalesReceiptTable/>
+              <SalesReceiptTable />
               <div className="bg-mirage/5 text-sm md:text-base border-t border-platinum text-gray-700 py-3 px-6">
                 Thank you for your business!
               </div>

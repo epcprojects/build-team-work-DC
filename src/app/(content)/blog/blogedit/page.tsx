@@ -4,7 +4,7 @@ import { Breadcrumb } from "@/src/app/components/ui";
 import { TextEditor } from "@/src/app/components/blog";
 import {
   CheckBoxWithLabel,
-  CyberButton,
+  ThemeButton,
   ButtonType,
   ThemeInput,
   InputType,
@@ -253,12 +253,12 @@ const BlogEditPage = () => {
         </div>
 
         <div className="flex justify-end items-center gap-4 mt-4 md:mt-8">
-          <CyberButton type={ButtonType.PRIMARY_OUTLINE}>
+          <ThemeButton type={ButtonType.PRIMARY_OUTLINE}>
             <span className="font-semibold">Cancel</span>
-          </CyberButton>
-          <CyberButton type={ButtonType.PRIMARY}>
+          </ThemeButton>
+          <ThemeButton type={ButtonType.PRIMARY}>
             <span className="font-semibold">Submit</span>
-          </CyberButton>
+          </ThemeButton>
         </div>
       </section>
     </>

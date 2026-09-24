@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import CyberButton, { ButtonType } from "../forms/CyberButton";
+import ThemeButton, { ButtonType } from "../forms/ThemeButton";
 import { CartIcon } from "@/public/icons";
 import { useRouter } from "next/navigation";
 import { Images } from "../../ui/images";
@@ -82,7 +82,7 @@ const ProductAccordion: React.FC<SingleAccordionProps> = ({
             </div>
 
             <div className="flex btnContainer items-center flex-col md:flex-row justify-between gap-4">
-              <CyberButton
+              <ThemeButton
                 fullWidth
                 type={ButtonType.SECONDARY}
                 icon={<CartIcon />}
@@ -90,8 +90,7 @@ const ProductAccordion: React.FC<SingleAccordionProps> = ({
                 paddings="px-5 py-2 md:py-3"
               >
                 Add to Cart
-              </CyberButton>
-             
+              </ThemeButton>
             </div>
           </div>
         )}

@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { OffCanvas } from "@/src/app/components/overlays";
 import { ArrowWithTailIcon, CartIcon } from "@/public/icons";
-import { CyberButton, ButtonType } from "@/src/app/components/forms";
+import { ThemeButton, ButtonType } from "@/src/app/components/forms";
 import { Images } from "@/src/app/ui/images";
 import type { CartItem } from "./useCart";
 
@@ -50,17 +50,17 @@ const CartOffCanvas: React.FC<CartOffCanvasProps> = ({
           </h5>
 
           <p className="text-base text-center text-gray-600 mb-4">
-            Don&apos;t miss out on our amazing training products - start adding items
-            today!
+            Don&apos;t miss out on our amazing training products - start adding
+            items today!
           </p>
 
-          <CyberButton
+          <ThemeButton
             onClick={onClose}
             type={ButtonType.PRIMARY}
             paddings="px-5 md:px-8 py-1.5 md:py-2"
           >
             <span className="font-semibold">Close</span>
-          </CyberButton>
+          </ThemeButton>
         </div>
       ) : (
         <>
@@ -112,7 +112,10 @@ const CartOffCanvas: React.FC<CartOffCanvasProps> = ({
                             min={1}
                             value={item.quantity}
                             onChange={(e) =>
-                              onUpdateQuantity(item.id, Number(e.target.value) || 1)
+                              onUpdateQuantity(
+                                item.id,
+                                Number(e.target.value) || 1,
+                              )
                             }
                             className="border w-20 py-1.5 rounded-md outline-none px-2"
                           />
@@ -153,7 +156,9 @@ const CartOffCanvas: React.FC<CartOffCanvasProps> = ({
               </p>
               <p className="flex items-center gap-3">
                 <span className="text-base w-1/2">Sales Tax:</span>
-                <span className="font-medium text-base w-1/2 text-end">TBD</span>
+                <span className="font-medium text-base w-1/2 text-end">
+                  TBD
+                </span>
               </p>
             </div>
           </div>
@@ -167,16 +172,16 @@ const CartOffCanvas: React.FC<CartOffCanvasProps> = ({
           </div>
 
           <div className="px-4 flex items-center justify-between">
-            <CyberButton
+            <ThemeButton
               icon={<CartIcon />}
               type={ButtonType.PRIMARY_OUTLINE}
               paddings="px-4 py-2"
               onClick={onClose}
             >
               Update Cart
-            </CyberButton>
+            </ThemeButton>
 
-            <CyberButton
+            <ThemeButton
               animateIconClasses={"duration-700 group-hover:translate-x-2"}
               icon={<ArrowWithTailIcon />}
               type={ButtonType.PRIMARY}
@@ -184,7 +189,7 @@ const CartOffCanvas: React.FC<CartOffCanvasProps> = ({
               onClick={onCheckout}
             >
               Checkout
-            </CyberButton>
+            </ThemeButton>
           </div>
         </>
       )}
@@ -193,4 +198,3 @@ const CartOffCanvas: React.FC<CartOffCanvasProps> = ({
 };
 
 export default CartOffCanvas;
-

@@ -1,5 +1,5 @@
 export { default as CheckBoxWithLabel } from "./CheckBoxWithLabel";
-export { default as CyberButton, ButtonType } from "./CyberButton";
+export { default as ThemeButton, ButtonType } from "./ThemeButton";
 export { default as ThemeInput, InputType } from "./ThemeInput";
 export { default as LanguageToggle } from "./LanguageToggle";
 export { default as AdministrativeInformationForm } from "./AdministrativeInformationForm";

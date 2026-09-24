@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { BlogCard } from "@/src/app/components/blog";
 import {
-  CyberButton,
+  ThemeButton,
   ButtonType,
   CyberSearchInput,
   CyberSelect,
@@ -75,14 +75,14 @@ const BlogPage = () => {
               <label htmlFor="" className="text-gray-400 invisible">
                 New Post
               </label>
-              <CyberButton
+              <ThemeButton
                 fullWidth
                 type={ButtonType.PRIMARY}
                 paddings="px-5 py-2"
                 onClick={() => router.push("/blog/blogedit")}
               >
                 Add New Post
-              </CyberButton>
+              </ThemeButton>
             </div>
           </div>
         </div>

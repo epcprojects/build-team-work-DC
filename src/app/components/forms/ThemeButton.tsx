@@ -23,7 +23,7 @@ interface ButtonProps {
   animateIconClasses?: string;
 }
 
-const CyberButton: React.FC<ButtonProps> = ({
+const ThemeButton: React.FC<ButtonProps> = ({
   children,
   type = ButtonType.PRIMARY,
   htmlType = "button",
@@ -90,4 +90,4 @@ const CyberButton: React.FC<ButtonProps> = ({
   );
 };
 
-export default CyberButton;
+export default ThemeButton;

@@ -101,7 +101,7 @@ const Header = () => {
             </div>
           </div>
           <div className="flex items-center justify-center gap-3">
-            <div className="flex flex-row lg:flex-col items-end gap-4 justify-end">
+            <div className="flex flex-row lg:flex-col items-end gap-2 justify-end">
               <div className="flex items-center gap-3">
                 <Link
                   href="/training"
