@@ -8,6 +8,7 @@ import arrowHead from "@/public/images/pricingPageImages/arrowHead.svg";
 import cyberBook from "@/public/images/componentsImages/cyberBook.png";
 import audienceIcon from "@/public/images/componentsImages/audienceIcon.svg";
 import cartPrimary from "@/public/images/cartPrimary.svg";
+import arrowWithTail from "@/public/images/arrowWithTail.svg";
 
 export const ComponentImages = {
   homeIcon: homeIcon,
@@ -19,4 +20,5 @@ export const ComponentImages = {
        cyberBook: cyberBook,
         audienceIcon: audienceIcon,
         cartPrimary: cartPrimary,
+        arrowWithTail: arrowWithTail
 };

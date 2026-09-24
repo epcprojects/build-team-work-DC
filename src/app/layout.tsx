@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Footer, Header } from "./components/layout";
 import { CartProvider } from "./components/cart/useCart";
+import { ScrollToTopButton } from "./components/ui";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -35,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className={`min-h-full flex flex-col ${poppins.className}`}> <CartProvider>
           <Header />
           {children}
-          {/* <ScrollToTopButton /> */}
+          <ScrollToTopButton />
           <Footer />
         </CartProvider></body>
     </html>
