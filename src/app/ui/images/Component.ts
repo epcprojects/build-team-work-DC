@@ -7,6 +7,7 @@ import CyberMockupScreens from "@/public/images/homePageImages/CyberMockupScreen
 import arrowHead from "@/public/images/pricingPageImages/arrowHead.svg";
 import cyberBook from "@/public/images/componentsImages/cyberBook.png";
 import audienceIcon from "@/public/images/componentsImages/audienceIcon.svg";
+import cartPrimary from "@/public/images/cartPrimary.svg";
 
 export const ComponentImages = {
   homeIcon: homeIcon,
@@ -17,4 +18,5 @@ export const ComponentImages = {
      arrowHead: arrowHead,
        cyberBook: cyberBook,
         audienceIcon: audienceIcon,
+        cartPrimary: cartPrimary,
 };
