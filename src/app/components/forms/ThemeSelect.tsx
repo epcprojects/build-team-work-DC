@@ -15,7 +15,7 @@ interface SelectBoxProps {
   disabled?: boolean;
 }
 
-const CyberSelect: React.FC<SelectBoxProps> = ({
+const ThemeSelect: React.FC<SelectBoxProps> = ({
   id = "select-box",
   label = "Select:",
   options,
@@ -66,4 +66,4 @@ const CyberSelect: React.FC<SelectBoxProps> = ({
   );
 };
 
-export default CyberSelect;
+export default ThemeSelect;

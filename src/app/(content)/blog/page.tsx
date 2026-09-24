@@ -6,8 +6,8 @@ import { BlogCard } from "@/src/app/components/blog";
 import {
   ThemeButton,
   ButtonType,
-  CyberSearchInput,
-  CyberSelect,
+  ThemeSearchInput,
+  ThemeSelect,
 } from "@/src/app/components/forms";
 import { Breadcrumb } from "@/src/app/components/ui";
 import {
@@ -46,7 +46,7 @@ const BlogPage = () => {
       <section className="container max-w-8xl mx-auto px-4 md:px-8 py-8 md:py-16">
         <div className="flex items-center gap-4 justify-between flex-col md:flex-row mb-8">
           <div className="md:w-auto w-full">
-            <CyberSearchInput
+            <ThemeSearchInput
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
               onSubmit={handleSubmit}
@@ -55,7 +55,7 @@ const BlogPage = () => {
           </div>
 
           <div className="flex items-center md:w-auto w-full flex-col md:flex-row md:gap-4">
-            <CyberSelect
+            <ThemeSelect
               label=" Category:"
               options={[...blogCategoryOptions]}
               value={category}
@@ -63,7 +63,7 @@ const BlogPage = () => {
               name=" category"
             />
 
-            <CyberSelect
+            <ThemeSelect
               label="Order:"
               options={[...blogOrderOptions]}
               value={order}

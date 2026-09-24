@@ -5,5 +5,5 @@ export { default as LanguageToggle } from "./LanguageToggle";
 export { default as AdministrativeInformationForm } from "./AdministrativeInformationForm";
 export { default as PaymentInformationForm } from "./PaymentInformationForm";
 export { default as AccountInformation } from "./AccountInformation";
-export { default as CyberSearchInput } from "./CyberSearchInput";
-export { default as CyberSelect } from "./CyberSelect";
+export { default as ThemeSearchInput } from "./ThemeSearchInput";
+export { default as ThemeSelect } from "./ThemeSelect";

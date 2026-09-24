@@ -58,11 +58,11 @@ const ThemeButton: React.FC<ButtonProps> = ({
       break;
     case ButtonType.PRIMARY_OUTLINE:
       typeClasses =
-        "bg-white hover:bg-primaryDark hover:text-white border-primary hover:border-primaryDark text-primary";
+        "bg-transparent hover:bg-primaryDark hover:text-white border-primary hover:border-primaryDark text-primary";
       break;
     case ButtonType.SECONDARY_OUTLINE:
       typeClasses =
-        "bg-white hover:bg-secondaryDark hover:text-white border-secondary hover:border-secondaryDark text-secondary";
+        "bg-transparent hover:bg-secondaryDark hover:text-white border-secondary hover:border-secondaryDark text-secondary";
       break;
     case ButtonType.GRAY:
       typeClasses =

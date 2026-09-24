@@ -66,7 +66,7 @@ const WhyChooseUsSection: React.FC = () => {
                   key={index}
                   className="col-span-12 md:col-span-6 grid items-stretch"
                 >
-                  <div className="p-4 rounded-xl cursor-pointer hover:scale-105 duration-300 hover:bg-gray-50 shadow-sm border">
+                  <div className="p-4 rounded-xl cursor-pointer hover:scale-105 duration-300 hover:bg-gray-50 shadow-sm border border-platinum">
                     <img src={item.icon} className="mb-4" alt="" />
                     <h2 className="text-gray-800 font-normal">{item.text}</h2>
                   </div>

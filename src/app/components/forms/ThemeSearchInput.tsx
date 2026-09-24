@@ -8,7 +8,7 @@ interface SearchInputProps {
   onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
-const CyberSearchInput: React.FC<SearchInputProps> = ({
+const ThemeSearchInput: React.FC<SearchInputProps> = ({
   id = "default-search",
   placeholder = "Search",
   value,
@@ -55,4 +55,4 @@ const CyberSearchInput: React.FC<SearchInputProps> = ({
   );
 };
 
-export default CyberSearchInput;
+export default ThemeSearchInput;
