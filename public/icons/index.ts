@@ -20,3 +20,4 @@ export { default as RollOutIcon } from "./RollOutIcon";
 export { default as CopyIcon } from "./CopyIcon";
 export { default as AccountInfoIcon } from "./AccountInfoIcon";
 export { default as AccordionIcon } from "./AccordionIcon";
+export { default as SelectorArrowIcon } from "./SelectorArrowIcon";

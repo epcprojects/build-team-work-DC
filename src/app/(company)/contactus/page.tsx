@@ -14,6 +14,7 @@ import { BusinessHours, ContactSection } from "@/src/app/components/contact";
 import SupportIcon from "@/public/icons/SupportIcon";
 import { useRouter } from "next/navigation";
 import { Images } from "@/src/app/ui/images";
+import { SelectorArrowIcon } from "@/public/icons";
 const ContactUsPage = () => {
   const router = useRouter();
   const countries = [
@@ -165,18 +166,7 @@ const ContactUsPage = () => {
                     <div className="col-span-12 md:mb-2">
                       <label className="block">
                         <div className="relative flex  md:!w-full flex-col mb-3 md:mb-0 gap-1 text-slate-700 ">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            className="absolute pointer-events-none right-2 top-2.5 md:top-3 h-6 w-6"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                         <SelectorArrowIcon/>
                           <select
                             id="os"
                             name="os"
@@ -185,10 +175,10 @@ const ContactUsPage = () => {
                             onChange={(e) => setSelectedCountry(e.target.value)}
                             className="w-full appearance-none rounded-md md:rounded-md  text-[#212529] border border-nebula bg-white  px-4 py-2 md:py-3  focus-visible:outline  focus-visible:outline-offset-2 focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 "
                           >
-                            <option value="">Choose Your Country</option>
+                            <option value="">Choose Your Country </option>
                             {countries.map((country) => (
                               <option key={country} value={country}>
-                                {country}
+                                {country} 
                               </option>
                             ))}
                           </select>

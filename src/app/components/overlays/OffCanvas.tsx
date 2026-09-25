@@ -65,24 +65,23 @@ const OffCanvas: React.FC<OffCanvasProps> = ({
 
   return (
     <Portal>
-      <div className="fixed inset-0 z-[100] flex justify-end">
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50"
-          onClick={onClose}
-        ></div>
+      <div className="fixed inset-0 z-[9999] flex justify-end">
+        <div className="fixed inset-0 bg-black/50 z-0" onClick={onClose}></div>
         <div
           ref={offCanvasRef}
-          className="bg-white w-full md:w-2/5 xl:w-2/6 h-dvh  shadow-lg transform transition-transform translate-x-full"
+          className="bg-white z-10 relative w-full md:w-2/5 xl:w-2/6 h-dvh  shadow-lg transform transition-transform"
           style={{ transform: isOpen ? "translateX(0)" : "translateX(100%)" }}
         >
-          <div className="flex justify-between p-4 border-b items-center">
+          <div className="flex justify-between p-4 border-b border-platinum items-center">
             <div className="flex items-center gap-2">
-              <Image
-                src={Images.componentImages.cartPrimary}
-                className="w-6 h-6"
-                alt="primary cart icon"
-              />
-              <h2 className="text-xl font-semibold">{title}</h2>
+              {Images.componentImages?.cartPrimary && (
+                <Image
+                  src={Images.componentImages.cartPrimary}
+                  className="w-6 h-6"
+                  alt="primary cart icon"
+                />
+              )}
+              <h2 className="text-xl font-semibold">{title} </h2>
             </div>
 
             <button
@@ -92,7 +91,7 @@ const OffCanvas: React.FC<OffCanvasProps> = ({
               <span>✖</span>
             </button>
           </div>
-          <div className="mt-0 pb-24 overflow-y-scroll h-dvh  customScrollbar bg-alabaster">
+          <div className="mt-0 pb-24 overflow-y-scroll h-dvh  customScrollbar bg-[#f9fafb]">
             {children}
           </div>
         </div>

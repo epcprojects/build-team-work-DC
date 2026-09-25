@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { CartIcon } from "@/public/icons";
 import { FaqAccordion, SingleAccordion } from "@/src/app/components/faq";
 import { ThemeButton, ButtonType } from "@/src/app/components/forms";
@@ -17,17 +17,82 @@ import {
 } from "@/src/app/data/pricingData";
 
 const PricingPage = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const { addItem, openCart } = useCart();
+  // const handleAddToCart = () => {
+  //   addItem({
+  //     id: "cyber-safety-individual",
+  //     name: "Cyber Safety for Individuals",
+  //     unitPrice: 29.99,
+  //   });
+  //   openCart();
+  // };
 
-  const handleAddToCart = () => {
-    addItem({
-      id: "cyber-safety-individual",
-      name: "Cyber Safety for Individuals",
-      unitPrice: 29.99,
-    });
-    openCart();
-  };
+  const addToCartItems = [
+    {
+      label: "Business Essentials",
+      onClick: () => {
+        addItem({
+          id: "business-essentials-individual",
+          name: "Business Essentials",
+          unitPrice: 29.99,
+        });
+        openCart();
+      },
+    },
+    {
+      label: "Employee Excellence",
+      onClick: () => {
+        addItem({
+          id: "employee-excellence-individual",
+          name: "Employee Excellence",
+          unitPrice: 29.99,
+        });
+        openCart();
+      },
+    },
+    {
+      label: "Emotional Intelligence",
+      onClick: () => {
+        addItem({
+          id: "emotional-intelligence-individual",
+          name: "Emotional Intelligence",
+          unitPrice: 29.99,
+        });
+        openCart();
+      },
+    },
+    {
+      label: "Healthy Body and Mind",
+      onClick: () => {
+        addItem({
+          id: "healthy-body-mind-individual",
+          name: "Healthy Body and Mind",
+          unitPrice: 29.99,
+        });
+        openCart();
+      },
+    },
+  ];
+
+  const learnMoreItems = [
+    {
+      label: "Business Essentials",
+      href: "/business-essentials",
+    },
+    {
+      label: "Employee Excellence",
+      href: "/employee-excellence",
+    },
+    {
+      label: "Emotional Intelligence",
+      href: "/emotional-intelligence",
+    },
+    {
+      label: "Healthy Body and Mind",
+      href: "/healthy-body-mind",
+    },
+  ];
 
   return (
     <>
@@ -71,18 +136,18 @@ const PricingPage = () => {
                     <ThemeButton
                       fullWidth
                       icon={<CartIcon />}
-                      onClick={handleAddToCart}
                       paddings="px-5 py-2 md:py-3"
-                       dropdown
+                      dropdown
+                      dropdownItems={addToCartItems}
                     >
                       Add to Cart
                     </ThemeButton>
                     <ThemeButton
                       fullWidth
                       type={ButtonType.PRIMARY_OUTLINE}
-                      onClick={() => router.push("/cyber-safety-training")}
+                      dropdown
+                      dropdownItems={learnMoreItems}
                       paddings="px-5 py-2 md:py-3"
-                        dropdown
                     >
                       Learn more
                     </ThemeButton>
@@ -169,12 +234,14 @@ const PricingPage = () => {
           </div>
         </div>
       </section>
+     
 
       <section className="pb-8 md:pb-16">
         <div className="container max-w-8xl mx-auto px-4 md:px-8">
           <h2 className="text-xl md:text-3xl text-black   font-semibold mb-4 md:mb-10">
             Frequently Asked Questions
           </h2>
+          <ThemeButton >Start now</ThemeButton>
 
           <FaqAccordion></FaqAccordion>
         </div>

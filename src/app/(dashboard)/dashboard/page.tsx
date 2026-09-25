@@ -1,15 +1,8 @@
 "use client";
 
-import {
-  AccountInformation,
-} from "@/src/app/components/forms";
-import {
-  CopyIcon,
-  RollOutIcon,
-} from "@/public/icons";
-import {
-  CourseStatsCard,
-} from "@/src/app/components/training";
+import { AccountInformation } from "@/src/app/components/forms";
+import { CopyIcon, RollOutIcon } from "@/public/icons";
+import { CourseStatsCard } from "@/src/app/components/training";
 import { FAQsFileIcon } from "@/public/icons";
 import { FAQsSingleAccordion } from "@/src/app/components/faq";
 import Link from "next/link";
@@ -62,7 +55,7 @@ const DashboardPage = () => {
         <div className="container max-w-8xl mx-auto grid grid-cols-12 gap-4 px-4 md:px-8">
           <div className="col-span-12 lg:col-span-8 grid grid-cols-12 gap-4 items-stretch">
             <div className="col-span-12 md:col-span-6  items-stretch grid">
-             <AccountInformation/>
+              <AccountInformation />
             </div>
 
             <div className="col-span-12 md:col-span-6  items-stretch grid">
@@ -94,8 +87,10 @@ const DashboardPage = () => {
 
             {/* training log */}
             <div className="col-span-12  items-stretch grid">
-             <TrainingLog certificates={certificates}
-              onDownload={handleDownload}/>
+              <TrainingLog
+                certificates={certificates}
+                onDownload={handleDownload}
+              />
             </div>
           </div>
           <div className="col-span-12 lg:col-span-4 ">

@@ -285,11 +285,13 @@
 // };
 
 // export default ThemeButton;
-"use client"
 
+
+"use client";
+
+import Link from "next/link";
 import React, { useState } from "react";
 
-// Button type definitions
 export const ButtonType = {
   PRIMARY: "primary",
   SECONDARY: "secondary",
@@ -300,7 +302,8 @@ export const ButtonType = {
 
 interface DropdownItem {
   label: string;
-  href: string;
+  href?: string; // agar diya ho to navigate karega
+  onClick?: () => void; // agar diya ho to action call karega (href se priority nahi hoga, dono ho sakte hain)
 }
 
 interface ButtonProps {
@@ -316,7 +319,6 @@ interface ButtonProps {
   icon?: React.ReactNode;
   animateIconClasses?: string;
 
-   // Dropdown
   dropdown?: boolean;
   dropdownItems?: DropdownItem[];
 }
@@ -331,23 +333,19 @@ const ThemeButton: React.FC<ButtonProps> = ({
   fullWidth = false,
   width,
   paddings,
-  icon, 
+  icon,
   animateIconClasses,
-   dropdown = false,
+  dropdown = false,
   dropdownItems = [],
 }) => {
-
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const baseClasses =
     "font-normal rounded-lg group border transition-colors flex justify-center items-center gap-2";
 
   const widthClasses = fullWidth ? "w-full" : width ? width : "w-fit";
-
   const paddingClasses = paddings ? paddings : "px-10 py-2";
-
   const animateClasses = animateIconClasses ? animateIconClasses : "";
-
   const dropdownClasses = dropdown ? "theme-button-dropdown" : "";
 
   let typeClasses = "";
@@ -382,17 +380,54 @@ const ThemeButton: React.FC<ButtonProps> = ({
     ? "opacity-50 cursor-not-allowed"
     : "cursor-pointer";
 
+  const handleDropdownItemClick = (item: DropdownItem) => {
+    item.onClick?.();
+    setIsDropdownOpen(false);
+  };
+
   return (
-    <button
-      type={htmlType}
-      className={`${baseClasses} ${widthClasses} ${typeClasses} ${disabledClasses} ${className} ${paddingClasses} ${dropdownClasses}`}
-      onClick={onClick}
-      disabled={disabled}
-    >
-      {icon && <span className={`block ${animateClasses}`}>{icon}</span>}
-      {children}
-       
-    </button>
+    <div className="relative w-full">
+      <button
+        type={htmlType}
+        className={`${baseClasses} ${widthClasses} ${typeClasses} ${disabledClasses} ${className} ${paddingClasses} ${dropdownClasses}`}
+        onClick={() => {
+          if (dropdown) {
+            setIsDropdownOpen((prev) => !prev);
+          }
+          onClick?.();
+        }}
+        disabled={disabled}
+      >
+        {icon && <span className={`block ${animateClasses}`}>{icon}</span>}
+        {children}
+      </button>
+
+      {dropdown && isDropdownOpen && dropdownItems.length > 0 && (
+        <div className="absolute left-0 top-full z-50 mt-2 w-full rounded-lg border border-gray-200 bg-white shadow-lg overflow-hidden">
+          {dropdownItems.map((item) =>
+            item.href ? (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="block px-4 py-3 text-sm md:text-base text-black hover:bg-gray-m-100 transition-colors"
+                onClick={() => setIsDropdownOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <button
+                key={item.label}
+                type="button"
+                onClick={() => handleDropdownItemClick(item)}
+                className="block w-full text-left px-4 py-3 text-sm md:text-base text-black hover:bg-gray-m-100 transition-colors cursor-pointer"
+              >
+                {item.label}
+              </button>
+            )
+          )}
+        </div>
+      )}
+    </div>
   );
 };
 

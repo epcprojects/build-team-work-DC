@@ -39,28 +39,30 @@ const CartOffCanvas: React.FC<CartOffCanvasProps> = ({
       closeOnOutsideClick={true}
     >
       {isEmpty ? (
-        <div className="px-5 mt-5 flex items-center justify-center flex-col">
+        <div className=" flex items-center justify-center flex-col bg-[#f9fafb] p-12">
           <Image
             src={Images.blogImages.cartEmpty}
-            className="mb-4 w-32 md:w-44"
+            className="mb-4 w-32 md:w-55"
             alt="cart empty icon"
           />
-          <h5 className="font-semibold text-center text-xl text-gray-900">
+          <h5 className="font-semibold text-center text-xl text-mirage mb-2">
             Your shopping cart is currently empty!
           </h5>
 
-          <p className="text-base text-center text-gray-600 mb-4">
+          <p className="text-base text-center text-mirage mb-4">
             Don&apos;t miss out on our amazing training products - start adding
             items today!
           </p>
 
-          <ThemeButton
+         <div>
+           <ThemeButton
             onClick={onClose}
             type={ButtonType.PRIMARY}
             paddings="px-5 md:px-8 py-1.5 md:py-2"
           >
             <span className="font-semibold">Close</span>
           </ThemeButton>
+         </div>
         </div>
       ) : (
         <>
@@ -71,29 +73,29 @@ const CartOffCanvas: React.FC<CartOffCanvasProps> = ({
                   <tr className="bg-whiteSmoke">
                     <th
                       scope="col"
-                      className="px-1.5 text-sm font-normal py-3 border"
+                      className="px-1.5 text-sm font-normal py-3 border border-platinum "
                     >
                       Product Description
                     </th>
                     <th
                       scope="col"
-                      className="text-sm py-3 border px-1.5 font-normal"
+                      className="text-sm py-3 border border-platinum  px-1.5 font-normal"
                     >
                       Quantity
                     </th>
                     <th
                       scope="col"
-                      className="text-sm py-3 border px-1.5 font-normal"
+                      className="text-sm py-3 border border-platinum  px-1.5 font-normal"
                     >
                       Price
                     </th>
                     <th
                       scope="col"
-                      className="text-sm py-3 border px-1.5 font-normal"
+                      className="text-sm py-3 border border-platinum  px-1.5 font-normal"
                     >
                       Subtotal
                     </th>
-                    <th scope="col" className="px-6 py-3 border"></th>
+                    <th scope="col" className="px-6 py-3 border border-platinum "></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -101,11 +103,11 @@ const CartOffCanvas: React.FC<CartOffCanvasProps> = ({
                     <tr className="bg-white" key={item.id}>
                       <th
                         scope="row"
-                        className="px-1.5 py-4 font-semibold border text-primary"
+                        className="px-1.5 py-4 font-semibold border border-platinum  text-primary"
                       >
                         {item.name}
                       </th>
-                      <td className="px-1.5 py-4 border">
+                      <td className="px-1.5 py-4 border border-platinum ">
                         <div className="flex justify-center">
                           <input
                             type="number"
@@ -117,22 +119,22 @@ const CartOffCanvas: React.FC<CartOffCanvasProps> = ({
                                 Number(e.target.value) || 1,
                               )
                             }
-                            className="border w-20 py-1.5 rounded-md outline-none px-2"
+                            className="border border-platinum  w-20 py-1.5 rounded-md outline-none px-2"
                           />
                         </div>
                       </td>
-                      <td className="px-1.5 py-4 border text-gray-600">
+                      <td className="px-1.5 py-4 border border-platinum   text-gray-600">
                         {currency(item.unitPrice)}
                       </td>
-                      <td className="px-1.5 border py-4 text-gray-600">
+                      <td className="px-1.5 border border-platinum  py-4 text-gray-600">
                         {currency(item.unitPrice * item.quantity)}
                       </td>
-                      <td className="border px-1.5">
-                        <div className="flex justify-center items-center">
+                      <td className="border border-platinum  px-1.5">
+                        <div className="flex justify-center items-center ">
                           <button
                             type="button"
                             onClick={() => onRemoveItem(item.id)}
-                            className=""
+                            className="cursor-pointer"
                           >
                             <Image
                               src={Images.blogImages.filledDeleteIcon}
@@ -162,7 +164,7 @@ const CartOffCanvas: React.FC<CartOffCanvasProps> = ({
               </p>
             </div>
           </div>
-          <div className="border-t border-b py-3 bg-fantacy mb-4">
+          <div className="border-t border-b border-platinum  py-3 bg-fantacy mb-4">
             <p className="flex items-center m-0 px-4 gap-3">
               <span className="font-medium text-base w-1/2">Total</span>
               <span className="font-semibold text-base text-end w-1/2">
@@ -181,7 +183,8 @@ const CartOffCanvas: React.FC<CartOffCanvasProps> = ({
               Update Cart
             </ThemeButton>
 
-            <ThemeButton
+            <div>
+              <ThemeButton
               animateIconClasses={"duration-700 group-hover:translate-x-2"}
               icon={<ArrowWithTailIcon />}
               type={ButtonType.PRIMARY}
@@ -190,6 +193,7 @@ const CartOffCanvas: React.FC<CartOffCanvasProps> = ({
             >
               Checkout
             </ThemeButton>
+            </div>
           </div>
         </>
       )}

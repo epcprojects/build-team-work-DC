@@ -77,7 +77,7 @@ const Header = () => {
 
   return (
     <>
-      <header className=" w-full shadow-lg sticky top-0 bg-white  z-99">
+      <header className=" w-full shadow-lg sticky top-0 bg-white  z-30">
         <nav className="flex md:items-center justify-between md:flex-row flex-col gap-6 md:px-8 px-4 py-4 container max-w-8xl  mx-auto bg-white ">
           <div className="">
             <div className="flex items-center justify-between gap-12">

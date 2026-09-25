@@ -4,8 +4,10 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
+  startTransition,
   type ReactNode,
 } from "react";
 import { useRouter } from "next/navigation";
@@ -18,7 +20,7 @@ export interface CartItem {
   quantity: number;
 }
 
-const CART_STORAGE_KEY = "cyberSafetyCart";
+const CART_STORAGE_KEY = "ProductItemCart";
 
 const readCartFromStorage = (): CartItem[] => {
   if (typeof window === "undefined") return [];
@@ -63,20 +65,26 @@ const CartContext = createContext<CartContextValue | null>(null);
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const router = useRouter();
-const [items, setItems] = useState<CartItem[]>(readCartFromStorage);
-const [isCartOpen, setIsCartOpen] = useState(false);
+  const [items, setItems] = useState<CartItem[]>([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
-//   useEffect(() => {
-//     setItems(readCartFromStorage());
-//   }, []);
-
-  const setAndPersist = useCallback((updater: (prev: CartItem[]) => CartItem[]) => {
-    setItems((prev) => {
-      const next = updater(prev);
-      writeCartToStorage(next);
-      return next;
+  useEffect(() => {
+    const storedItems = readCartFromStorage();
+    startTransition(() => {
+      setItems(storedItems);
     });
   }, []);
+
+  const setAndPersist = useCallback(
+    (updater: (prev: CartItem[]) => CartItem[]) => {
+      setItems((prev) => {
+        const next = updater(prev);
+        writeCartToStorage(next);
+        return next;
+      });
+    },
+    [],
+  );
 
   const addItem = useCallback(
     (item: Omit<CartItem, "quantity">, quantity = 1) => {
@@ -87,28 +95,28 @@ const [isCartOpen, setIsCartOpen] = useState(false);
           return [...prev, { ...item, quantity: safeQuantity }];
         }
         return prev.map((x) =>
-          x.id === item.id ? { ...x, quantity: x.quantity + safeQuantity } : x
+          x.id === item.id ? { ...x, quantity: x.quantity + safeQuantity } : x,
         );
       });
     },
-    [setAndPersist]
+    [setAndPersist],
   );
 
   const updateQuantity = useCallback(
     (id: string, quantity: number) => {
       const safeQuantity = Math.max(1, quantity);
       setAndPersist((prev) =>
-        prev.map((x) => (x.id === id ? { ...x, quantity: safeQuantity } : x))
+        prev.map((x) => (x.id === id ? { ...x, quantity: safeQuantity } : x)),
       );
     },
-    [setAndPersist]
+    [setAndPersist],
   );
 
   const removeItem = useCallback(
     (id: string) => {
       setAndPersist((prev) => prev.filter((x) => x.id !== id));
     },
-    [setAndPersist]
+    [setAndPersist],
   );
 
   const clearCart = useCallback(() => {
@@ -117,12 +125,12 @@ const [isCartOpen, setIsCartOpen] = useState(false);
 
   const subtotal = useMemo(
     () => items.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0),
-    [items]
+    [items],
   );
 
   const itemCount = useMemo(
     () => items.reduce((sum, item) => sum + item.quantity, 0),
-    [items]
+    [items],
   );
 
   const openCart = useCallback(() => {
@@ -157,7 +165,7 @@ const [isCartOpen, setIsCartOpen] = useState(false);
       isCartOpen,
       openCart,
       closeCart,
-    ]
+    ],
   );
 
   return (
