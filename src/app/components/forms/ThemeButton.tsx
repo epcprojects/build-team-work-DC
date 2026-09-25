@@ -285,7 +285,7 @@
 // };
 
 // export default ThemeButton;
-
+"use client"
 
 import React, { useState } from "react";
 
